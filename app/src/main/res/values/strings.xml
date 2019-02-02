@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">iucaa_x</string>
+    <string name="anime_title">Anime Title</string>
+    <string name="category">Category</string>
+    <string name="_0_0">0.0</string>
+    <string name="studio">Studio</string>
+    <string name="anime_description">Anime Description</string>
+    <string name="todo">TODO</string>
+</resources>
