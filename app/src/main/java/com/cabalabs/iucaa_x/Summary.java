@@ -3,6 +3,7 @@ package com.cabalabs.iucaa_x;
 public class Summary {
 
     private String id ;
+    private String UID;
     private String folder;
     private String OBSID;
     private String Observer;
@@ -16,8 +17,9 @@ public class Summary {
 
     }
 
-    public Summary(String id, String folder, String OBSID, String Observer, String Object, String RA, String Decr, String Exposure_time, String image_url) {
+    public Summary(String id, String UID, String folder, String OBSID, String Observer, String Object, String RA, String Decr, String Exposure_time, String image_url) {
         this.id = id;
+        this.UID = UID;
         this.folder = folder;
         this.OBSID = OBSID;
         this.Observer = Observer;
@@ -35,6 +37,12 @@ public class Summary {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getUID() { return UID; }
+
+    public void setUID(String UID) {
+        this.UID = UID;
     }
 
     public String getFolder() {

@@ -1,86 +1,79 @@
 package com.cabalabs.iucaa_x;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String URL = "http://192.168.2.12:8000/iucaaapp/";
-    JsonArrayRequest request;
-    RequestQueue requestQueue;
-    List<Summary> listSumm = new ArrayList<Summary>();
-    RecyclerView recyclerView;
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recyclerviewid);
-        jsonrequest();
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
+
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+
+        this.getSupportActionBar().hide();
     }
 
-    private void jsonrequest() {
-
-        request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-
-                JSONObject jsonObject = null;
-
-                for(int i=0; i<response.length(); i++){
-
-                    try{
-
-                        jsonObject = response.getJSONObject(i);
-                        Summary summary = new Summary();
-                        summary.setFolder(jsonObject.getString("folder"));
-                        summary.setOBSID(jsonObject.getString("OBSID"));
-                        summary.setObserver(jsonObject.getString("Observer"));
-                        summary.setObject(jsonObject.getString("Object"));
-                        summary.setRA(jsonObject.getString("RA"));
-                        summary.setDecr(jsonObject.getString("Decr"));
-                        summary.setExposure_time(jsonObject.getString("Exposure_time"));
-                        listSumm.add(summary);
-
-                    }catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                setuprecyclerview(listSumm);
-            }
-        },new Response.ErrorListener(){
-            @Override
-            public void onErrorResponse(VolleyError error){
-
-            }
-        });
-
-        requestQueue = Volley.newRequestQueue(MainActivity.this);
-        requestQueue.add(request);
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFrag(new OneFragment(), "Observation Info");
+        adapter.addFrag(new TwoFragment(), "Basic Stats");
+        adapter.addFrag(new ThreeFragment(), "L1 Data Integrity");
+        adapter.addFrag(new FourFragment(), "Data Saturation");
+        adapter.addFrag(new FiveFragment(), "Noise Dominated Fraction");
+        adapter.addFrag(new SixFragment(), "Top Noisy Pixels");
+        adapter.addFrag(new SevenFragment(), "Detector Plane Histogram");
+        adapter.addFrag(new EightFragment(), "Count Rate Plots");
+        adapter.addFrag(new NineFragment(), "Housekeeping Plots");
+        viewPager.setAdapter(adapter);
     }
 
-    private void setuprecyclerview(List<Summary> listSumm) {
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this,listSumm);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
 
-        recyclerView.setAdapter(myadapter);
+        @Override
+        public Fragment getItem(int position) {
+            Log.e("POSITION",String.valueOf(mFragmentList.get(position)));
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFrag(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
     }
 }
