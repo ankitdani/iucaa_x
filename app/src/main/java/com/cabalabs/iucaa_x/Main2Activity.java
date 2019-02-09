@@ -33,7 +33,7 @@ public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    final String URL = "http://192.168.2.12:8000/iucaaapp/";
+    final String URL = "http://192.168.2.12:8000/iucaaapp";
     JsonArrayRequest request;
     RequestQueue requestQueue;
     List<Summary> listSumm = new ArrayList<Summary>();

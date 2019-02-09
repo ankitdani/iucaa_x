@@ -61,16 +61,18 @@ public class SevenFragment extends Fragment{
 
                 JSONObject jsonObject = new JSONObject();
 
+                String uidprev = getActivity().getIntent().getExtras().getString("UID");
+                Log.e("Received",String.valueOf(uidprev));
+
                 for(int i=0; i<response.length(); i++){
 
                     try{
 
                         jsonObject = response.getJSONObject(i);
 
-                        String uidprev = getActivity().getIntent().getExtras().getString("UID");
-                        Log.e("Received",String.valueOf(uidprev));
 
                         String uid = jsonObject.getString("UID");
+                        Log.e("Actual",uid);
 
                         if(uid.equals(uidprev)) {
 

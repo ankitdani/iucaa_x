@@ -25,6 +25,8 @@ android:background="#303030">
             android:background="@drawable/loading_shape"
             android:paddingTop="60dp"
             android:paddingBottom="60dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:contentDescription="@string/todo" />
 
         <ImageView
@@ -33,6 +35,8 @@ android:background="#303030">
             android:layout_height="wrap_content"
             android:background="@drawable/loading_shape"
             android:paddingBottom="60dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:contentDescription="@string/todo" />
 
 
@@ -42,6 +46,8 @@ android:background="#303030">
             android:layout_height="wrap_content"
             android:background="@drawable/loading_shape"
             android:paddingBottom="60dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:contentDescription="@string/todo" />
 
         <ImageView
@@ -49,6 +55,9 @@ android:background="#303030">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/loading_shape"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:contentDescription="@string/todo" />
     </LinearLayout>
 </ScrollView>
