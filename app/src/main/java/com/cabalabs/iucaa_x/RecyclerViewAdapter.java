@@ -4,6 +4,7 @@ package com.cabalabs.iucaa_x;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +19,8 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
-    private Context mContext ;
-    private List<Summary> mData ;
+    public Context mContext ;
+    public List<Summary> mData ;
     RequestOptions option;
 
 
@@ -54,7 +55,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 i.putExtra("Exposure_time",mData.get(viewHolder.getAdapterPosition()).getExposure_time());
 
                 mContext.startActivity(i);
-
             }
         });
 
@@ -77,6 +77,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
+        Log.e("SIZE",String.valueOf(mData.size()));
         return mData.size();
     }
 
@@ -98,5 +99,4 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         }
     }
-
 }

@@ -1,11 +1,17 @@
 package com.cabalabs.iucaa_x;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +21,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -30,7 +38,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main2Activity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        SwipeRefreshLayout.OnRefreshListener {
 
 
     final String URL = "http://192.168.2.12:8000/iucaaapp";
@@ -39,25 +48,78 @@ public class Main2Activity extends AppCompatActivity
     List<Summary> listSumm = new ArrayList<Summary>();
     //List<Integer> ID = new ArrayList<Integer>();
     RecyclerView recyclerView;
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        if(isOnline()){
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
 
-        recyclerView = findViewById(R.id.recyclerviewid);
-        jsonrequest();
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                    Main2Activity.this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            drawer.addDrawerListener(toggle);
+            toggle.syncState();
+
+            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(Main2Activity.this);
+
+            recyclerView = findViewById(R.id.recyclerviewid);
+            jsonrequest();
+        }
+        else{
+            Toast.makeText(Main2Activity.this, "No Internet Connection!", Toast.LENGTH_SHORT).show();
+
+        }
+
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.Swipe);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                if(isOnline()){
+
+                    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+                    setSupportActionBar(toolbar);
+
+                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                            Main2Activity.this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                    drawer.addDrawerListener(toggle);
+                    toggle.syncState();
+
+                    NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                    navigationView.setNavigationItemSelectedListener(Main2Activity.this);
+
+                    recyclerView = findViewById(R.id.recyclerviewid);
+                    listSumm.clear();
+                    jsonrequest();
+                }
+                else{
+                    Toast.makeText(Main2Activity.this, "No Internet Connection!", Toast.LENGTH_SHORT).show();
+                }
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        swipeRefreshLayout.setRefreshing(false);        //to stop refreshing
+                    }
+                }, 1000);
+            }
+        });
+    }
+
+
+    public boolean isOnline(){
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting();
     }
 
     private void jsonrequest() {
@@ -92,7 +154,6 @@ public class Main2Activity extends AppCompatActivity
 
                 setuprecyclerview(listSumm);
 
-
             }
         },new Response.ErrorListener(){
             @Override
@@ -105,11 +166,11 @@ public class Main2Activity extends AppCompatActivity
         requestQueue.add(request);
     }
 
+
     private void setuprecyclerview(List<Summary> listSumm) {
 
         RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this,listSumm);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         recyclerView.setAdapter(myadapter);
     }
 
@@ -170,4 +231,8 @@ public class Main2Activity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    public void onRefresh() {
+
+    }
 }

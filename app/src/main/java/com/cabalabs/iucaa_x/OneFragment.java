@@ -2,6 +2,7 @@ package com.cabalabs.iucaa_x;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -25,8 +26,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import uk.co.senab.photoview.PhotoViewAttacher;
-
 public class OneFragment extends Fragment{
 
     public OneFragment() {
@@ -39,7 +38,6 @@ public class OneFragment extends Fragment{
     ListView lst;
     List<String> listobs;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,13 +47,13 @@ public class OneFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        jsonimagerequest();
+        jsonrequest();
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_one, container, false);
     }
 
-    private void jsonimagerequest() {
+    private void jsonrequest() {
 
         request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
             @Override
@@ -81,7 +79,7 @@ public class OneFragment extends Fragment{
 
                             listobs = new ArrayList<String>();
 
-                            listobs.add(jsonObject.getString("date_obs"));
+                            listobs.add("DATE_OBS: "+jsonObject.getString("date_obs"));
                             listobs.add(jsonObject.getString("time_obs"));
                             listobs.add(jsonObject.getString("date_end"));
                             listobs.add(jsonObject.getString("time_end"));
@@ -100,28 +98,6 @@ public class OneFragment extends Fragment{
 
                             lst = (ListView) getView().findViewById(R.id.listview);
                             lst.setAdapter(adapter);
-
-//                            String[] obsinfo = {jsonObject.getString("date_obs"),
-//                                                jsonObject.getString("time_obs"),
-//                                                jsonObject.getString("date_end"),
-//                                                jsonObject.getString("time_end"),
-//                                                jsonObject.getString("obs_id"),
-//                                                jsonObject.getString("exposure"),
-//                                                jsonObject.getString("sourceid"),
-//                                                jsonObject.getString("observer"),
-//                                                jsonObject.getString("ra_pnt"),
-//                                                jsonObject.getString("dec_pnt")};
-
-//                            String dateobs = jsonObject.getString("date_obs");
-//                            String timeobs = jsonObject.getString("time_obs");
-//                            String dateend = jsonObject.getString("date_end");
-//                            String timeend = jsonObject.getString("time_end");
-//                            String obsid = jsonObject.getString("obs_id");
-//                            String exposure = jsonObject.getString("exposure");
-//                            String sourceid = jsonObject.getString("sourceid");
-//                            String observer = jsonObject.getString("observer");
-//                            String rapnt = jsonObject.getString("ra_pnt");
-//                            String decpnt = jsonObject.getString("dec_pnt");
 
                         }
 
@@ -142,4 +118,5 @@ public class OneFragment extends Fragment{
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         requestQueue.add(request);
     }
+
 }
