@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 public class dphActivity extends AppCompatActivity {
 
-    final String URL = "http://192.168.2.12:8000/dqrreport/dph";
+    final String URL = "http://cabalabs.com:8000/dqrreport/dph";
     JsonArrayRequest request;
     RequestQueue requestQueue;
 

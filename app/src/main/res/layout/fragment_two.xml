@@ -6,113 +6,541 @@
     android:layout_height="match_parent"
     tools:context=".TwoFragment">
 
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-            <TextView android:text="Filename_OF" />
 
-            <TextView
-                android:id="@+id/f_of" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="15dp"
+                android:background="#424242">
 
-        </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="PARAM"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
 
-            <TextView android:text="Filename_FF" />
-        </TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:text="ORIGINAL FILE"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                </TableRow>
 
-            <TextView android:text="size_bytes_OF" />
-        </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Filename"
+                        android:textSize="18dp" />
 
-            <TextView android:text="size_bytes_FF" />
-        </TableRow>
+                    <TextView
+                        android:id="@+id/of1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                </TableRow>
 
-            <TextView android:text="size_OF" />
-        </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView android:text="size_FF" />
-        </TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="Size (bytes)"
+                        android:textColor="#424242"
+                        android:textSize="18dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/of2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
 
-            <TextView android:text="events_quadA_OF" />
-        </TableRow>
+                </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView android:text="events_quadA_FF" />
-        </TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Size"
+                        android:textSize="18dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/of3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
 
-            <TextView android:text="events_quadB_OF" />
-        </TableRow>
+                </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView android:text="events_quadB_FF" />
-        </TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Events in Quadrant A"
+                        android:textSize="18dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/of4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
 
-            <TextView android:text="events_quadC_OF" />
-        </TableRow>
+                </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView android:text="events_quadC_FF" />
-        </TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Events in Quadrant B"
+                        android:textSize="18dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/of5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
 
-            <TextView android:text="events_quadD_OF" />
-        </TableRow>
+                </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView android:text="events_quadD_FF" />
-        </TableRow>
-    </TableLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Events in Quadrant C"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/of6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Events in Quadrant D"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/of7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:background="#424242">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:text="PARAM"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:text="FINAL FILE"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:paddingHorizontal="10dp"
+                        android:textColor="#424242"
+                        android:text="Filename"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/ff1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:textColor="#424242"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="Size (bytes)"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/ff2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Size"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/ff3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Events in Quadrant A"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/ff4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Events in Quadrant B"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/ff5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Events in Quadrant C"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/ff6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:text="Events in Quadrant D"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/ff7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:textColor="#424242"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="18dp" />
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

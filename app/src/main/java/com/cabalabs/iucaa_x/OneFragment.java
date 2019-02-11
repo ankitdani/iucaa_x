@@ -32,7 +32,7 @@ public class OneFragment extends Fragment{
         // Required empty public constructor
     }
 
-    final String URL = "http://192.168.2.12:8000/dqrreport/obsinfo";
+    final String URL = "http://192.168.43.12:8000/dqrreport/obsinfo";
     JsonArrayRequest request;
     RequestQueue requestQueue;
     ListView lst;

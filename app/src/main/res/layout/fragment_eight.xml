@@ -1,23 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EightFragment">
+    tools:context=".EightFragment"
+    android:background="#303030">
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EIGHT"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:-->
+                <!--/>-->
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="2dp"/>
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
+
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
     </ScrollView>
+
 
 </RelativeLayout>

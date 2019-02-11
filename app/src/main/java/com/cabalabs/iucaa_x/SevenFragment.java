@@ -22,6 +22,8 @@ import org.json.JSONObject;
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
+
 public class SevenFragment extends Fragment{
 
     public SevenFragment() {
@@ -29,7 +31,7 @@ public class SevenFragment extends Fragment{
     }
 
 
-    final String URL = "http://192.168.2.12:8000/dqrreport/dph";
+    final String URL = "http://192.168.43.12:8000/dqrreport/dph";
     JsonArrayRequest request;
     RequestQueue requestQueue;
 
@@ -86,10 +88,10 @@ public class SevenFragment extends Fragment{
                             imageView2 = (ImageView) getView().findViewById(R.id.imgC);
                             imageView3 = (ImageView) getView().findViewById(R.id.imgD);
 
-                            Glide.with(SevenFragment.this).load(quadA).into(imageView);
-                            Glide.with(SevenFragment.this).load(quadB).into(imageView1);
-                            Glide.with(SevenFragment.this).load(quadC).into(imageView2);
-                            Glide.with(SevenFragment.this).load(quadD).into(imageView3);
+                            Glide.with(SevenFragment.this).load(quadA).transition(withCrossFade(1500)).into(imageView);
+                            Glide.with(SevenFragment.this).load(quadB).transition(withCrossFade(1500)).into(imageView1);
+                            Glide.with(SevenFragment.this).load(quadC).transition(withCrossFade(1500)).into(imageView2);
+                            Glide.with(SevenFragment.this).load(quadD).transition(withCrossFade(1500)).into(imageView3);
 
                             PhotoViewAttacher photoView = new PhotoViewAttacher(imageView);
                             photoView.update();
