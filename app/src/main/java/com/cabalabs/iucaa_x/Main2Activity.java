@@ -216,9 +216,9 @@ public class Main2Activity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_slideshow1) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_manage1) {
 
         } else if (id == R.id.nav_share) {
 
