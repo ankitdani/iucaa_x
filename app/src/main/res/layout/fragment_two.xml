@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TwoFragment">
+    tools:context=".DQR.TwoFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -167,7 +167,7 @@
                     <TextView
                         android:id="@+id/of4"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -199,7 +199,7 @@
                     <TextView
                         android:id="@+id/of5"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -231,7 +231,7 @@
                     <TextView
                         android:id="@+id/of6"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -263,7 +263,7 @@
                     <TextView
                         android:id="@+id/of7"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -304,7 +304,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@android:color/white"
@@ -353,7 +353,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -367,7 +367,7 @@
                     <TextView
                         android:id="@+id/ff2"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -417,7 +417,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -449,7 +449,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -481,7 +481,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
@@ -513,7 +513,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"

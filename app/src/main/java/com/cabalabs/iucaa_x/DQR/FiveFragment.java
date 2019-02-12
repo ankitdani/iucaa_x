@@ -1,4 +1,4 @@
-package com.cabalabs.iucaa_x;
+package com.cabalabs.iucaa_x.DQR;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,9 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class SixFragment extends Fragment{
+import com.cabalabs.iucaa_x.R;
 
-    public SixFragment() {
+public class FiveFragment extends Fragment{
+
+    public FiveFragment() {
         // Required empty public constructor
     }
 
@@ -21,7 +23,7 @@ public class SixFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_six, container, false);
+        return inflater.inflate(R.layout.fragment_five, container, false);
     }
 
 }

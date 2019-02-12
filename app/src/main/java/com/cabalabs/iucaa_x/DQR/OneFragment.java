@@ -1,4 +1,4 @@
-package com.cabalabs.iucaa_x;
+package com.cabalabs.iucaa_x.DQR;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.cabalabs.iucaa_x.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,7 +33,7 @@ public class OneFragment extends Fragment{
         // Required empty public constructor
     }
 
-    final String URL = "http://192.168.43.12:8000/dqrreport/obsinfo";
+    String URL;
     JsonArrayRequest request;
     RequestQueue requestQueue;
     ListView lst;
@@ -46,7 +47,7 @@ public class OneFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        URL = getString(R.string.IP_OBSInfo);
         jsonrequest();
 
         // Inflate the layout for this fragment

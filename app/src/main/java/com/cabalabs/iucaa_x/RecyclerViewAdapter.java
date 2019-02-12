@@ -44,7 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(mContext, MainActivity.class);
+                Intent i = new Intent(mContext, FragActivity.class);
                 i.putExtra("UID",mData.get(viewHolder.getAdapterPosition()).getUID());
                 i.putExtra("folder",mData.get(viewHolder.getAdapterPosition()).getFolder());
                 i.putExtra("OBSID",mData.get(viewHolder.getAdapterPosition()).getOBSID());

@@ -1,4 +1,4 @@
-package com.cabalabs.iucaa_x;
+package com.cabalabs.iucaa_x.DQR;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +14,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.cabalabs.iucaa_x.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,7 +32,7 @@ public class EightFragment extends Fragment{
     }
 
 
-    final String URL = "http://192.168.43.12:8000/dqrreport/countrate";
+    String URL;
     JsonArrayRequest request;
     RequestQueue requestQueue;
 
@@ -58,6 +59,8 @@ public class EightFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         jsonimagerequest();
+
+        URL = getString(R.string.IP_LightCurve);
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_eight, container, false);

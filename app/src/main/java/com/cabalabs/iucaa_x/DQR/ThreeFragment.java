@@ -1,10 +1,12 @@
-package com.cabalabs.iucaa_x;
+package com.cabalabs.iucaa_x.DQR;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.cabalabs.iucaa_x.R;
 
 public class ThreeFragment extends Fragment{
 
