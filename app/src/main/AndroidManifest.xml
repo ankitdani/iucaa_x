@@ -3,8 +3,8 @@
     package="com.cabalabs.iucaa_x">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,30 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".THRESHIST.ModThresAct"
+            android:label="@string/title_activity_mod_thres"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".PXHIST.PixHistory"
+            android:label="@string/title_activity_pix_history"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PROBPGS.ProblemPg"
+            android:label="@string/title_activity_problem_pg"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MGPROLG.MergedProLog"
+            android:label="@string/title_activity_merged_pro_log"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UOBSID.UpOBSID"
+            android:label="@string/title_activity_up_obsid"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MOBSID.MergOBSID"
+            android:label="@string/title_activity_merg_obsid"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -23,9 +47,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FragActivity">
-
-        </activity>
+        <activity android:name=".FragActivity" />
     </application>
 
 </manifest>
