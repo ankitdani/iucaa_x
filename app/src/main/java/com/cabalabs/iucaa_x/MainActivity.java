@@ -1,6 +1,7 @@
 package com.cabalabs.iucaa_x;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,6 +24,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.cabalabs.iucaa_x.MGPROLG.MergedProLog;
+import com.cabalabs.iucaa_x.PROBPGS.ProblemPg;
+import com.cabalabs.iucaa_x.PXHIST.PixHistory;
+import com.cabalabs.iucaa_x.THRESHIST.ModThresAct;
+import com.cabalabs.iucaa_x.UOBSID.UpOBSID;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -210,14 +216,28 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.orbit_wise) {
+            Intent intent = new Intent(MainActivity.this,MainActivity.class);
+            startActivity(intent);
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow1) {
-
-        } else if (id == R.id.nav_manage1) {
-
+        } else if (id == R.id.merged_obsid_wise) {
+            Intent intent = new Intent(MainActivity.this, MergedProLog.class);
+            startActivity(intent);
+        } else if (id == R.id.upload_obsid_wise) {
+            Intent intent = new Intent(MainActivity.this, UpOBSID.class);
+            startActivity(intent);
+        } else if (id == R.id.merged_processing_logs) {
+            Intent intent = new Intent(MainActivity.this,MergedProLog.class);
+            startActivity(intent);
+        } else if (id == R.id.problem_pages) {
+            Intent intent = new Intent(MainActivity.this, ProblemPg.class);
+            startActivity(intent);
+        } else if (id == R.id.pixel_enable) {
+            Intent intent = new Intent(MainActivity.this, PixHistory.class);
+            startActivity(intent);
+        } else if (id == R.id.module_threshold_history) {
+            Intent intent = new Intent(MainActivity.this, ModThresAct.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

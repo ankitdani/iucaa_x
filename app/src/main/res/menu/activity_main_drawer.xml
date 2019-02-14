@@ -5,33 +5,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/orbit_wise"
             android:icon="@drawable/ic_menu_camera"
             android:title="Orbit-wise" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/merged_obsid_wise"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Merged OBSID-wise" />
         <item
-            android:id="@+id/nav_slideshow1"
+            android:id="@+id/upload_obsid_wise"
             android:icon="@drawable/ic_menu_slideshow"
             android:title=" Uploaded OBSID-wise" />
         <item
-            android:id="@+id/nav_manage1"
+            android:id="@+id/merged_processing_logs"
             android:icon="@drawable/ic_menu_manage"
             android:title=" Merged processing logs" />
 
         <item
-            android:id="@+id/nav_slideshow2"
+            android:id="@+id/problem_pages"
             android:icon="@drawable/ic_menu_slideshow"
             android:title=" Problem pages" />
         <item
-            android:id="@+id/nav_manage2"
+            android:id="@+id/pixel_enable"
             android:icon="@drawable/ic_menu_manage"
             android:title="Pixel enable/disable history" />
 
         <item
-            android:id="@+id/nav_slideshow3"
+            android:id="@+id/module_threshold_history"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Module threshold history " />
 

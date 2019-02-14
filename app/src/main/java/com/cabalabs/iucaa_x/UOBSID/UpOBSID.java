@@ -3,6 +3,8 @@ package com.cabalabs.iucaa_x.UOBSID;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,9 +16,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.cabalabs.iucaa_x.R;
+import com.cabalabs.iucaa_x.UOBSID.Adapter.MyAdapter;
+import com.cabalabs.iucaa_x.UOBSID.Model.Item;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UpOBSID extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    RecyclerView list;
+    RecyclerView.LayoutManager layoutManager;
+    List<Item> items = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +53,35 @@ public class UpOBSID extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        list = (RecyclerView)findViewById(R.id.recycler);
+        list.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        list.setLayoutManager(layoutManager);
+
+        setData();
+
+    }
+
+    private void setData() {
+        for(int i=0;i<20;i++)
+        {
+
+            Item item = new Item("This is item "+(i+1),"LEVEL1AS1CZT20190209C04_009T03_9000002714.tar_V1.2", true);
+            items.add(item);
+//            if(i%2==0)
+//            {
+//                Item item = new Item("This is item "+(i+1),"LEVEL1AS1CZT20190209C04_009T03_9000002714.tar_V1.2", true);
+//                items.add(item);
+//            }
+//            else
+//            {
+//                Item item = new Item("This is item "+(i+1),"",false);
+//                items.add(item);
+//            }
+        }
+        MyAdapter adapter = new MyAdapter(items);
+        list.setAdapter(adapter);
     }
 
     @Override
