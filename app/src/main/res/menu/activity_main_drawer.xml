@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/orbit_wise"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_assessment_black_24dp"
             android:title="Orbit-wise" />
         <item
             android:id="@+id/merged_obsid_wise"
