@@ -1,4 +1,4 @@
-package com.cabalabs.iucaa_x.UOBSID.Adapter;
+package com.cabalabs.iucaa_x.PXHIST.Adapter;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -11,10 +11,8 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.cabalabs.iucaa_x.PXHIST.Model.Item;
 import com.cabalabs.iucaa_x.R;
-import com.cabalabs.iucaa_x.UOBSID.Model.Item;
-
-
 import com.github.aakira.expandablelayout.ExpandableLayoutListenerAdapter;
 import com.github.aakira.expandablelayout.ExpandableLinearLayout;
 import com.github.aakira.expandablelayout.Utils;

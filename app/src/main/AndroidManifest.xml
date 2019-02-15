@@ -14,11 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".PROBPGS.ProcessFailureReport"></activity>
+        <activity android:name=".MGPROLG.FragActivityMGL2" />
+        <activity android:name=".MOBSID.FragActivityMOBSID" />
+        <activity android:name=".MGPROLG.Level2MergedProPg" />
+        <activity android:name=".MGPROLG.MergedOrbitProcessingLog" />
         <activity
             android:name=".THRESHIST.ModThresAct"
             android:label="@string/title_activity_mod_thres"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PXHIST.PixHistory"
             android:label="@string/title_activity_pix_history"
