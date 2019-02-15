@@ -31,7 +31,7 @@ public class NineFragment extends Fragment{
     }
 
 
-     String URL;
+    String URL;
     JsonArrayRequest request;
     RequestQueue requestQueue;
 
@@ -48,9 +48,6 @@ public class NineFragment extends Fragment{
     ImageView imageView9;
     ImageView imageView10;
     ImageView imageView11;
-    ImageView imageView12;
-    ImageView imageView13;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,9 +57,9 @@ public class NineFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        URL = getString(R.string.IP_HK);
         jsonimagerequest();
+
+        URL = getString(R.string.IP_LightCurve);
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_nine, container, false);
@@ -91,57 +88,47 @@ public class NineFragment extends Fragment{
 
                         if(uid.equals(uidprev)) {
 
-                            String plot1 = jsonObject.getString("plot1");
-                            String plot2 = jsonObject.getString("plot2");
-                            String plot3 = jsonObject.getString("plot3");
-                            String plot4 = jsonObject.getString("plot4");
-                            String plot5 = jsonObject.getString("plot5");
-                            String plot6 = jsonObject.getString("plot6");
-                            String plot7 = jsonObject.getString("plot7");
-                            String plot8 = jsonObject.getString("plot8");
-                            String plot9 = jsonObject.getString("plot9");
-                            String plot10 = jsonObject.getString("plot10");
-                            String plot11 = jsonObject.getString("plot11");
-                            String plot12 = jsonObject.getString("plot12");
-                            String plot13 = jsonObject.getString("plot13");
-                            String plot14 = jsonObject.getString("plot14");
+                            String crplot1 = jsonObject.getString("crplot1");
+                            String crimg1 = jsonObject.getString("crimg1");
+                            String crplot2 = jsonObject.getString("crplot2");
+                            String crimg2 = jsonObject.getString("crimg2");
+                            String crplot3 = jsonObject.getString("crplot3");
+                            String crimg3 = jsonObject.getString("crimg4");
+                            String crplot4 = jsonObject.getString("crplot4");
+                            String crimg4 = jsonObject.getString("crimg4");
+                            String crplot5 = jsonObject.getString("crplot5");
+                            String crimg5 = jsonObject.getString("crimg5");
+                            String crplot6 = jsonObject.getString("crplot6");
+                            String crimg6 = jsonObject.getString("crimg6");
 
-                            imageView = (ImageView) getView().findViewById(R.id.imgA);
-                            imageView1 = (ImageView) getView().findViewById(R.id.imgB);
-                            imageView2 = (ImageView) getView().findViewById(R.id.imgC);
-                            imageView3 = (ImageView) getView().findViewById(R.id.imgD);
+                            imageView = (ImageView) getView().findViewById(R.id.img1);
+                            imageView1 = (ImageView) getView().findViewById(R.id.img2);
+                            imageView2 = (ImageView) getView().findViewById(R.id.img3);
+                            imageView3 = (ImageView) getView().findViewById(R.id.img4);
 
-                            imageView4 = (ImageView) getView().findViewById(R.id.imgE);
-                            imageView5 = (ImageView) getView().findViewById(R.id.imgF);
-                            imageView6 = (ImageView) getView().findViewById(R.id.imgG);
-                            imageView7 = (ImageView) getView().findViewById(R.id.imgH);
+                            imageView4 = (ImageView) getView().findViewById(R.id.img5);
+                            imageView5 = (ImageView) getView().findViewById(R.id.img6);
+                            imageView6 = (ImageView) getView().findViewById(R.id.img7);
+                            imageView7 = (ImageView) getView().findViewById(R.id.img8);
 
-                            imageView8 = (ImageView) getView().findViewById(R.id.imgI);
-                            imageView9 = (ImageView) getView().findViewById(R.id.imgJ);
-                            imageView10 = (ImageView) getView().findViewById(R.id.imgK);
-                            imageView11 = (ImageView) getView().findViewById(R.id.imgL);
+                            imageView8 = (ImageView) getView().findViewById(R.id.img9);
+                            imageView9 = (ImageView) getView().findViewById(R.id.img10);
+                            imageView10 = (ImageView) getView().findViewById(R.id.img11);
+                            imageView11 = (ImageView) getView().findViewById(R.id.img12);
 
-                            imageView12 = (ImageView) getView().findViewById(R.id.imgM);
-                            imageView13 = (ImageView) getView().findViewById(R.id.imgN);
 
-                            Glide.with(NineFragment.this).load(plot1).transition(withCrossFade(1500)).into(imageView);
-                            Glide.with(NineFragment.this).load(plot2).transition(withCrossFade(1500)).into(imageView1);
-                            Glide.with(NineFragment.this).load(plot3).transition(withCrossFade(1500)).into(imageView2);
-                            Glide.with(NineFragment.this).load(plot4).transition(withCrossFade(1500)).into(imageView3);
-
-                            Glide.with(NineFragment.this).load(plot5).transition(withCrossFade(1500)).into(imageView4);
-                            Glide.with(NineFragment.this).load(plot6).transition(withCrossFade(1500)).into(imageView5);
-                            Glide.with(NineFragment.this).load(plot7).transition(withCrossFade(1500)).into(imageView6);
-                            Glide.with(NineFragment.this).load(plot8).transition(withCrossFade(1500)).into(imageView7);
-
-                            Glide.with(NineFragment.this).load(plot9).transition(withCrossFade(1500)).into(imageView8);
-                            Glide.with(NineFragment.this).load(plot10).transition(withCrossFade(1500)).into(imageView9);
-                            Glide.with(NineFragment.this).load(plot11).transition(withCrossFade(1500)).into(imageView10);
-                            Glide.with(NineFragment.this).load(plot12).transition(withCrossFade(1500)).into(imageView11);
-
-                            Glide.with(NineFragment.this).load(plot13).transition(withCrossFade(1500)).into(imageView12);
-                            Glide.with(NineFragment.this).load(plot14).transition(withCrossFade(1500)).into(imageView13);
-
+                            Glide.with(NineFragment.this).load(crplot1).transition(withCrossFade(1500)).into(imageView);
+                            Glide.with(NineFragment.this).load(crimg1).transition(withCrossFade(1500)).into(imageView1);
+                            Glide.with(NineFragment.this).load(crplot2).transition(withCrossFade(1500)).into(imageView2);
+                            Glide.with(NineFragment.this).load(crimg2).transition(withCrossFade(1500)).into(imageView3);
+                            Glide.with(NineFragment.this).load(crplot3).transition(withCrossFade(1500)).into(imageView4);
+                            Glide.with(NineFragment.this).load(crimg3).transition(withCrossFade(1500)).into(imageView5);
+                            Glide.with(NineFragment.this).load(crplot4).transition(withCrossFade(1500)).into(imageView6);
+                            Glide.with(NineFragment.this).load(crimg4).transition(withCrossFade(1500)).into(imageView7);
+                            Glide.with(NineFragment.this).load(crplot5).transition(withCrossFade(1500)).into(imageView8);
+                            Glide.with(NineFragment.this).load(crimg5).transition(withCrossFade(1500)).into(imageView9);
+                            Glide.with(NineFragment.this).load(crplot6).transition(withCrossFade(1500)).into(imageView10);
+                            Glide.with(NineFragment.this).load(crimg6).transition(withCrossFade(1500)).into(imageView11);
 
                             PhotoViewAttacher photoView = new PhotoViewAttacher(imageView);
                             photoView.update();
@@ -167,10 +154,6 @@ public class NineFragment extends Fragment{
                             photoView10.update();
                             PhotoViewAttacher photoView11 = new PhotoViewAttacher(imageView11);
                             photoView11.update();
-                            PhotoViewAttacher photoView12 = new PhotoViewAttacher(imageView12);
-                            photoView12.update();
-                            PhotoViewAttacher photoView13 = new PhotoViewAttacher(imageView13);
-                            photoView13.update();
 
                         }
 

@@ -1,5 +1,6 @@
 package com.cabalabs.iucaa_x.UOBSID;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,7 +16,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.cabalabs.iucaa_x.MGPROLG.MergedProLog;
+import com.cabalabs.iucaa_x.MainActivity;
+import com.cabalabs.iucaa_x.PROBPGS.ProblemPg;
+import com.cabalabs.iucaa_x.PXHIST.PixHistory;
 import com.cabalabs.iucaa_x.R;
+import com.cabalabs.iucaa_x.THRESHIST.ModThresAct;
 import com.cabalabs.iucaa_x.UOBSID.Adapter.MyAdapter;
 import com.cabalabs.iucaa_x.UOBSID.Model.Item;
 
@@ -36,14 +42,14 @@ public class UpOBSID extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -122,14 +128,28 @@ public class UpOBSID extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.orbit_wise) {
+            Intent intent = new Intent(UpOBSID.this,MainActivity.class);
+            startActivity(intent);
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.merged_obsid_wise) {
+            Intent intent = new Intent(UpOBSID.this, MergedProLog.class);
+            startActivity(intent);
+        } else if (id == R.id.upload_obsid_wise) {
+            Intent intent = new Intent(UpOBSID.this, UpOBSID.class);
+            startActivity(intent);
+        } else if (id == R.id.merged_processing_logs) {
+            Intent intent = new Intent(UpOBSID.this,MergedProLog.class);
+            startActivity(intent);
+        } else if (id == R.id.problem_pages) {
+            Intent intent = new Intent(UpOBSID.this, ProblemPg.class);
+            startActivity(intent);
+        } else if (id == R.id.pixel_enable) {
+            Intent intent = new Intent(UpOBSID.this, PixHistory.class);
+            startActivity(intent);
+        } else if (id == R.id.module_threshold_history) {
+            Intent intent = new Intent(UpOBSID.this, ModThresAct.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

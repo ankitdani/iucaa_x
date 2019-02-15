@@ -14,25 +14,25 @@
             android:title="Merged OBSID-wise" />
         <item
             android:id="@+id/upload_obsid_wise"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_cloud_upload_black_24dp"
             android:title=" Uploaded OBSID-wise" />
         <item
             android:id="@+id/merged_processing_logs"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_timeline_black_24dp"
             android:title=" Merged processing logs" />
 
         <item
             android:id="@+id/problem_pages"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_report_problem_black_24dp"
             android:title=" Problem pages" />
         <item
             android:id="@+id/pixel_enable"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_settings_power_black_24dp"
             android:title="Pixel enable/disable history" />
 
         <item
             android:id="@+id/module_threshold_history"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_description_black_24dp"
             android:title="Module threshold history " />
 
     </group>

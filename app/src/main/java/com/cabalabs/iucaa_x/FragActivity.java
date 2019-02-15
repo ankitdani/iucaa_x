@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.cabalabs.iucaa_x.DQR.EightFragment;
 import com.cabalabs.iucaa_x.DQR.FiveFragment;
 import com.cabalabs.iucaa_x.DQR.FourFragment;
-import com.cabalabs.iucaa_x.DQR.NineFragment;
+import com.cabalabs.iucaa_x.DQR.TenFragment;
 import com.cabalabs.iucaa_x.DQR.OneFragment;
 import com.cabalabs.iucaa_x.DQR.SevenFragment;
 import com.cabalabs.iucaa_x.DQR.SixFragment;
@@ -67,7 +67,7 @@ public class FragActivity extends AppCompatActivity {
         adapter.addFrag(new SixFragment(), "Top Noisy Pixels");
         adapter.addFrag(new SevenFragment(), "Detector Plane Histogram");
         adapter.addFrag(new EightFragment(), "Count Rate Plots");
-        adapter.addFrag(new NineFragment(), "Housekeeping Plots");
+        adapter.addFrag(new TenFragment(), "Housekeeping Plots");
         viewPager.setAdapter(adapter);
     }
 

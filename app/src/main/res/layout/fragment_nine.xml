@@ -11,332 +11,144 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:-->
+            <!--/>-->
 
             <ImageView
-                android:id="@+id/imgA"
+                android:id="@+id/img1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingTop="60dp"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="2dp"/>
 
             <ImageView
-                android:id="@+id/imgB"
+                android:id="@+id/img2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
 
             <ImageView
-                android:id="@+id/imgC"
+                android:id="@+id/img3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
 
             <ImageView
-                android:id="@+id/imgD"
+                android:id="@+id/img4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
 
             <ImageView
-                android:id="@+id/imgE"
+                android:id="@+id/img5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
 
             <ImageView
-                android:id="@+id/imgF"
+                android:id="@+id/img6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
 
             <ImageView
-                android:id="@+id/imgG"
+                android:id="@+id/img7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
 
             <ImageView
-                android:id="@+id/imgH"
+                android:id="@+id/img8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
 
             <ImageView
-                android:id="@+id/imgI"
+                android:id="@+id/img9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
 
             <ImageView
-                android:id="@+id/imgJ"
+                android:id="@+id/img10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
+                android:background="#303030"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
 
             <ImageView
-                android:id="@+id/imgK"
+                android:id="@+id/img11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
 
             <ImageView
-                android:id="@+id/imgL"
+                android:id="@+id/img12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
-            <ImageView
-                android:id="@+id/imgM"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="60dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
-            <ImageView
-                android:id="@+id/imgN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/loading_shape"
-                android:paddingBottom="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:contentDescription="@string/todo" />
-
-
+                android:background="#ffffff"
+                android:contentDescription="@string/todo"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
 
         </LinearLayout>
     </ScrollView>
 
 
 </RelativeLayout>
-
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<RelativeLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--tools:context=".NineFragment"-->
-    <!--android:background="#303030">-->
-
-
-    <!--&lt;!&ndash;<ScrollView&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;-->
-
-        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:orientation="vertical" >&ndash;&gt;-->
-
-            <!--<ImageView-->
-                <!--android:id="@+id/img1"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:background="@drawable/loading_shape"-->
-                <!--android:paddingTop="60dp"-->
-                <!--android:paddingBottom="60dp"-->
-                <!--android:paddingLeft="20dp"-->
-                <!--android:paddingRight="20dp"-->
-                <!--android:contentDescription="@string/todo" />-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img2"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img3"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img4"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img5"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img6"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img7"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img8"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img9"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img10"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img11"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img12"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img13"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="60dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/img14"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/loading_shape"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingBottom="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:contentDescription="@string/todo" />&ndash;&gt;-->
-        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
-    <!--&lt;!&ndash;</ScrollView>&ndash;&gt;-->
-
-
-<!--</RelativeLayout>-->
-

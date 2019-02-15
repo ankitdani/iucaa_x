@@ -25,6 +25,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.cabalabs.iucaa_x.MGPROLG.MergedProLog;
+import com.cabalabs.iucaa_x.MOBSID.MergOBSID;
 import com.cabalabs.iucaa_x.PROBPGS.ProblemPg;
 import com.cabalabs.iucaa_x.PXHIST.PixHistory;
 import com.cabalabs.iucaa_x.THRESHIST.ModThresAct;
@@ -221,7 +222,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.merged_obsid_wise) {
-            Intent intent = new Intent(MainActivity.this, MergedProLog.class);
+            Intent intent = new Intent(MainActivity.this, MergOBSID.class);
             startActivity(intent);
         } else if (id == R.id.upload_obsid_wise) {
             Intent intent = new Intent(MainActivity.this, UpOBSID.class);
