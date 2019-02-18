@@ -48,6 +48,13 @@ public class MainActivity extends AppCompatActivity
 
     JsonArrayRequest request;
     RequestQueue requestQueue;
+
+    public void RequestQueue(){
+
+        final int DEFAULT_NETWORK_THREAD_POOL_SIZE = 64;
+
+        //return DEFAULT_NETWORK_THREAD_POOL_SIZE;
+    }
     List<Summary> listSumm = new ArrayList<Summary>();
     //List<Integer> ID = new ArrayList<Integer>();
     RecyclerView recyclerView;
@@ -144,12 +151,12 @@ public class MainActivity extends AppCompatActivity
                         Summary summary = new Summary();
                         summary.setUID(jsonObject.getString("UID"));
                         summary.setFolder(jsonObject.getString("folder"));
-                        summary.setOBSID(jsonObject.getString("OBSID"));
+//                        summary.setOBSID(jsonObject.getString("OBSID"));
                         summary.setObserver(jsonObject.getString("Observer"));
-                        summary.setObject(jsonObject.getString("Object"));
-                        summary.setRA(jsonObject.getString("RA"));
-                        summary.setDecr(jsonObject.getString("Decr"));
-                        summary.setExposure_time(jsonObject.getString("Exposure_time"));
+//                        summary.setObject(jsonObject.getString("Object"));
+//                        summary.setRA(jsonObject.getString("RA"));
+//                        summary.setDecr(jsonObject.getString("Decr"));
+//                        summary.setExposure_time(jsonObject.getString("Exposure_time"));
                         listSumm.add(summary);
 
                     }catch (JSONException e) {

@@ -69,7 +69,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         // Load Image from the internet and set it into Imageview using Glide
 
-        Glide.with(mContext).load(mData.get(position).getImage_url()).apply(option).into(holder.img_thumbnail);
+        //Glide.with(mContext).load(mData.get(position).getImage_url()).apply(option).into(holder.img_thumbnail);
 
 
 
@@ -77,7 +77,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        Log.e("SIZE",String.valueOf(mData.size()));
         return mData.size();
     }
 
@@ -85,7 +84,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         TextView folder ;
         TextView observer ;
-        ImageView img_thumbnail;
+        //ImageView img_thumbnail;
         LinearLayout view_container;
 
 
@@ -95,7 +94,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             view_container = itemView.findViewById(R.id.container);
             folder = itemView.findViewById(R.id.folder);
             observer = itemView.findViewById(R.id.observer);
-            img_thumbnail = itemView.findViewById(R.id.thumbnail);
+            //img_thumbnail = itemView.findViewById(R.id.thumbnail);
 
         }
     }

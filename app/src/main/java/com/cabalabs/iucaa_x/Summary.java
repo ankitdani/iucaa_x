@@ -11,7 +11,7 @@ public class Summary {
     private String RA ;
     private String Decr;
     private String Exposure_time;
-    private String image_url = "http://www.iucaa.in/~varunb/ASTROSAT_LOGO.jpg";
+    //private String image_url = "http://www.iucaa.in/~varunb/ASTROSAT_LOGO.jpg";
 
     public Summary() {
 
@@ -28,7 +28,7 @@ public class Summary {
         this.Decr = Decr;
         this.Exposure_time = Exposure_time;
 
-        this.image_url = image_url;
+        //this.image_url = image_url;
     }
 
     public String getId() {
@@ -101,11 +101,11 @@ public class Summary {
         Exposure_time = exposure_time;
     }
 
-    public String getImage_url() {
-        return image_url;
-    }
-
-    public void setImage_url(String image_url) {
-        this.image_url = image_url;
-    }
+//    public String getImage_url() {
+//        return image_url;
+//    }
+//
+//    public void setImage_url(String image_url) {
+//        this.image_url = image_url;
+//    }
 }
