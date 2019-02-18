@@ -44,6 +44,7 @@ public class FragActivity extends AppCompatActivity {
             tabLayout = (TabLayout) findViewById(R.id.tabs);
             tabLayout.setupWithViewPager(viewPager);
 
+            //To hide Tool Bar
             this.getSupportActionBar().hide();
         }
         else
