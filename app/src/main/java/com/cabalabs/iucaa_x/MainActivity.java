@@ -49,12 +49,6 @@ public class MainActivity extends AppCompatActivity
     JsonArrayRequest request;
     RequestQueue requestQueue;
 
-    public void RequestQueue(){
-
-        final int DEFAULT_NETWORK_THREAD_POOL_SIZE = 64;
-
-        //return DEFAULT_NETWORK_THREAD_POOL_SIZE;
-    }
     List<Summary> listSumm = new ArrayList<Summary>();
     //List<Integer> ID = new ArrayList<Integer>();
     RecyclerView recyclerView;
