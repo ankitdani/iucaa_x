@@ -59,7 +59,7 @@ public class NineFragment extends Fragment{
                              Bundle savedInstanceState) {
         jsonimagerequest();
 
-        URL = getString(R.string.IP_LightCurve);
+        URL = getString(R.string.IP_CRIMG);
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_nine, container, false);

@@ -9,7 +9,7 @@
     <string name="IP_DS">http://192.168.43.12:8000/dqrreport/datasat</string>
     <string name="IP_NDF">http://192.168.43.12:8000/dqrreport/noisefrag</string>
 
-    <string name="IP_Noisy">http://192.168.43.12:8000/dqrreport/noisy</string>
+    <!--<string name="IP_Noisy">http://192.168.43.12:8000/dqrreport/noisy</string>-->
     <string name="IP_DPH">http://192.168.43.12:8000/dqrreport/dph</string>
 
     <string name="IP_CRIMG">http://192.168.43.12:8000/dqrreport/countrate</string>

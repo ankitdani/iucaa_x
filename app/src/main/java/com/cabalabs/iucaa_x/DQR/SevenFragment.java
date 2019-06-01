@@ -37,6 +37,7 @@ public class SevenFragment extends Fragment{
     RequestQueue requestQueue;
 
 
+
     ImageView imageView;
     ImageView imageView1;
     ImageView imageView2;
