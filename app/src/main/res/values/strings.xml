@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">iucaa_x</string>
 
-    <string name="IP_Summary">http://192.168.43.96:8000/iucaaapp</string>
-    <string name="IP_OBSInfo">http://192.168.43.96:8000/dqrreport/obsinfo</string>
-    <string name="IP_DQR_Stats">http://192.168.43.96:8000/dqrreport/dqrstats</string>
+    <string name="IP_Summary">http://192.168.43.12:8000/iucaaapp</string>
+    <string name="IP_OBSInfo">http://192.168.43.12:8000/dqrreport/obsinfo</string>
+    <string name="IP_DQR_Stats">http://192.168.43.12:8000/dqrreport/dqrstats</string>
 
-    <string name="IP_L1">http://192.168.43.96:8000/dqrreport/level1</string>
-    <string name="IP_DS">http://192.168.43.96:8000/dqrreport/saturation</string>
-    <string name="IP_NDF">http://192.168.43.96:8000/dqrreport/ndf</string>
+    <string name="IP_L1">http://192.168.43.12:8000/dqrreport/datainteg</string>
+    <string name="IP_DS">http://192.168.43.12:8000/dqrreport/datasat</string>
+    <string name="IP_NDF">http://192.168.43.12:8000/dqrreport/noisefrag</string>
 
-    <string name="IP_Noisy">http://192.168.43.96:8000/dqrreport/noisy</string>
-    <string name="IP_DPH">http://192.168.43.96:8000/dqrreport/dph</string>
-    <string name="IP_LightCurve">http://192.168.43.96:8000/dqrreport/lightcurve</string>
+    <string name="IP_Noisy">http://192.168.43.12:8000/dqrreport/noisy</string>
+    <string name="IP_DPH">http://192.168.43.12:8000/dqrreport/dph</string>
+    <string name="IP_LightCurve">http://192.168.43.12:8000/dqrreport/lightcurve</string>
 
-    <string name="IP_CRIMG">http://192.168.43.96:8000/dqrreport/crimg</string>
-    <string name="IP_HK">http://192.168.43.96:8000/dqrreport/housekeeping</string>
+    <string name="IP_CRIMG">http://192.168.43.12:8000/dqrreport/countrate</string>
+    <string name="IP_HK">http://192.168.43.12:8000/dqrreport/housekeeping</string>
 
 
     <string name="category">Category</string>
