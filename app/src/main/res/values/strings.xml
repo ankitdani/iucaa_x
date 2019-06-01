@@ -11,7 +11,6 @@
 
     <string name="IP_Noisy">http://192.168.43.12:8000/dqrreport/noisy</string>
     <string name="IP_DPH">http://192.168.43.12:8000/dqrreport/dph</string>
-    <string name="IP_LightCurve">http://192.168.43.12:8000/dqrreport/lightcurve</string>
 
     <string name="IP_CRIMG">http://192.168.43.12:8000/dqrreport/countrate</string>
     <string name="IP_HK">http://192.168.43.12:8000/dqrreport/housekeeping</string>
