@@ -80,16 +80,16 @@ public class OneFragment extends Fragment{
 
                             listobs = new ArrayList<String>();
 
-                            listobs.add("DATE_OBS: "+jsonObject.getString("date_obs"));
-                            listobs.add(jsonObject.getString("time_obs"));
-                            listobs.add(jsonObject.getString("date_end"));
-                            listobs.add(jsonObject.getString("time_end"));
-                            listobs.add(jsonObject.getString("obs_id"));
-                            listobs.add(jsonObject.getString("exposure"));
-                            listobs.add(jsonObject.getString("sourceid"));
-                            listobs.add(jsonObject.getString("observer"));
-                            listobs.add(jsonObject.getString("ra_pnt"));
-                            listobs.add(jsonObject.getString("dec_pnt"));
+                            listobs.add("DATE_OBS "+jsonObject.getString("date_obs"));
+                            listobs.add("TIME_OBS "+jsonObject.getString("time_obs"));
+                            listobs.add("DATE_END "+jsonObject.getString("date_end"));
+                            listobs.add("TIME_END "+jsonObject.getString("time_end"));
+                            listobs.add("OBS_ID "+jsonObject.getString("obs_id"));
+                            listobs.add("EXPOSURE "+jsonObject.getString("exposure"));
+                            listobs.add("SOURCE_ID "+jsonObject.getString("sourceid"));
+                            listobs.add("OBSERVER "+jsonObject.getString("observer"));
+                            listobs.add("RA_PNT "+jsonObject.getString("ra_pnt"));
+                            listobs.add("DEC_PNT "+jsonObject.getString("dec_pnt"));
 
                             ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                                     getActivity().getApplicationContext(),
