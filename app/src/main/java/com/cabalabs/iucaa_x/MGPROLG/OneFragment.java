@@ -2,11 +2,14 @@ package com.cabalabs.iucaa_x.MGPROLG;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.android.volley.RequestQueue;
@@ -14,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
 import com.cabalabs.iucaa_x.R;
 
 import org.json.JSONArray;
@@ -76,16 +80,16 @@ public class OneFragment extends Fragment{
 
                             listobs = new ArrayList<String>();
 
-                            listobs.add("DATE_OBS: "+jsonObject.getString("date_obs"));
-                            listobs.add(jsonObject.getString("time_obs"));
-                            listobs.add(jsonObject.getString("date_end"));
-                            listobs.add(jsonObject.getString("time_end"));
-                            listobs.add(jsonObject.getString("obs_id"));
-                            listobs.add(jsonObject.getString("exposure"));
-                            listobs.add(jsonObject.getString("sourceid"));
-                            listobs.add(jsonObject.getString("observer"));
-                            listobs.add(jsonObject.getString("ra_pnt"));
-                            listobs.add(jsonObject.getString("dec_pnt"));
+                            listobs.add("DATE_OBS "+jsonObject.getString("date_obs"));
+                            listobs.add("TIME_OBS "+jsonObject.getString("time_obs"));
+                            listobs.add("DATE_END "+jsonObject.getString("date_end"));
+                            listobs.add("TIME_END "+jsonObject.getString("time_end"));
+                            listobs.add("OBS_ID "+jsonObject.getString("obs_id"));
+                            listobs.add("EXPOSURE "+jsonObject.getString("exposure"));
+                            listobs.add("SOURCE_ID "+jsonObject.getString("sourceid"));
+                            listobs.add("OBSERVER "+jsonObject.getString("observer"));
+                            listobs.add("RA_PNT "+jsonObject.getString("ra_pnt"));
+                            listobs.add("DEC_PNT "+jsonObject.getString("dec_pnt"));
 
                             ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                                     getActivity().getApplicationContext(),

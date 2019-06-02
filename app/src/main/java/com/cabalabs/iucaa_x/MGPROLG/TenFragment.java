@@ -31,7 +31,7 @@ public class TenFragment extends Fragment{
     }
 
 
-     String URL;
+    String URL;
     JsonArrayRequest request;
     RequestQueue requestQueue;
 

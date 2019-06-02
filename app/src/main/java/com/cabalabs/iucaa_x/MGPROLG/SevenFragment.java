@@ -20,6 +20,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
@@ -34,6 +35,7 @@ public class SevenFragment extends Fragment{
     String URL;
     JsonArrayRequest request;
     RequestQueue requestQueue;
+
 
 
     ImageView imageView;

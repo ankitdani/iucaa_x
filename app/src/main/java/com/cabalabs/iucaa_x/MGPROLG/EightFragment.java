@@ -20,6 +20,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
@@ -57,9 +58,8 @@ public class EightFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        jsonimagerequest();
-
         URL = getString(R.string.IP_CRIMG);
+        jsonimagerequest();
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_eight, container, false);
@@ -111,24 +111,25 @@ public class EightFragment extends Fragment{
                             imageView6 = (ImageView) getView().findViewById(R.id.img7);
                             imageView7 = (ImageView) getView().findViewById(R.id.img8);
 
+
                             imageView8 = (ImageView) getView().findViewById(R.id.img9);
                             imageView9 = (ImageView) getView().findViewById(R.id.img10);
                             imageView10 = (ImageView) getView().findViewById(R.id.img11);
                             imageView11 = (ImageView) getView().findViewById(R.id.img12);
 
 
-                            Glide.with(EightFragment.this).load(crplot1).transition(withCrossFade(1500)).into(imageView);
-                            Glide.with(EightFragment.this).load(crimg1).transition(withCrossFade(1500)).into(imageView1);
-                            Glide.with(EightFragment.this).load(crplot2).transition(withCrossFade(1500)).into(imageView2);
-                            Glide.with(EightFragment.this).load(crimg2).transition(withCrossFade(1500)).into(imageView3);
-                            Glide.with(EightFragment.this).load(crplot3).transition(withCrossFade(1500)).into(imageView4);
-                            Glide.with(EightFragment.this).load(crimg3).transition(withCrossFade(1500)).into(imageView5);
-                            Glide.with(EightFragment.this).load(crplot4).transition(withCrossFade(1500)).into(imageView6);
-                            Glide.with(EightFragment.this).load(crimg4).transition(withCrossFade(1500)).into(imageView7);
-                            Glide.with(EightFragment.this).load(crplot5).transition(withCrossFade(1500)).into(imageView8);
-                            Glide.with(EightFragment.this).load(crimg5).transition(withCrossFade(1500)).into(imageView9);
-                            Glide.with(EightFragment.this).load(crplot6).transition(withCrossFade(1500)).into(imageView10);
-                            Glide.with(EightFragment.this).load(crimg6).transition(withCrossFade(1500)).into(imageView11);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crplot1).transition(withCrossFade(1500)).into(imageView);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crimg1).transition(withCrossFade(1500)).into(imageView1);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crplot2).transition(withCrossFade(1500)).into(imageView2);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crimg2).transition(withCrossFade(1500)).into(imageView3);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crplot3).transition(withCrossFade(1500)).into(imageView4);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crimg3).transition(withCrossFade(1500)).into(imageView5);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crplot4).transition(withCrossFade(1500)).into(imageView6);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crimg4).transition(withCrossFade(1500)).into(imageView7);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crplot5).transition(withCrossFade(1500)).into(imageView8);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crimg5).transition(withCrossFade(1500)).into(imageView9);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crplot6).transition(withCrossFade(1500)).into(imageView10);
+                            Glide.with(com.cabalabs.iucaa_x.MGPROLG.EightFragment.this).load(crimg6).transition(withCrossFade(1500)).into(imageView11);
 
                             PhotoViewAttacher photoView = new PhotoViewAttacher(imageView);
                             photoView.update();
