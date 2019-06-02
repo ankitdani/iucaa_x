@@ -106,7 +106,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA1_DID"
                     android:paddingHorizontal="10dp"
-                    android:text="14"
                     android:textSize="18dp" />
 
 
@@ -121,7 +120,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA1_PID"
                     android:paddingHorizontal="10dp"
-                    android:text="0"
                     android:textSize="18dp" />
 
                 <TextView
@@ -135,7 +133,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA1_CNT"
                     android:paddingHorizontal="10dp"
-                    android:text="188"
                     android:textSize="18dp" />
 
 
@@ -150,7 +147,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA1_SG"
                     android:paddingHorizontal="10dp"
-                    android:text="0"
                     android:textSize="18dp" />
 
             </TableRow>
@@ -172,7 +168,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA2_DID"
                     android:paddingHorizontal="10dp"
-                    android:text="14"
                     android:textSize="18dp" />
 
 
@@ -187,7 +182,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA2_PID"
                     android:paddingHorizontal="10dp"
-                    android:text="0"
                     android:textSize="18dp" />
 
                 <TextView
@@ -201,7 +195,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA2_CNT"
                     android:paddingHorizontal="10dp"
-                    android:text="188"
                     android:textSize="18dp" />
 
 
@@ -216,7 +209,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA2_SG"
                     android:paddingHorizontal="10dp"
-                    android:text="0"
                     android:textSize="18dp" />
 
             </TableRow>
@@ -237,7 +229,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA3_DID"
                     android:paddingHorizontal="10dp"
-                    android:text="5"
                     android:textSize="18dp" />
 
 
@@ -252,10 +243,10 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA3_PID"
                     android:paddingHorizontal="10dp"
-                    android:text="0"
                     android:textSize="18dp" />
 
                 <TextView
+                    android:id="@+id/PP_QA3_CNT"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="1dp"
@@ -264,9 +255,7 @@
                     android:background="@android:color/white"
                     android:padding="5dp"
                     android:textColor="#424242"
-                    android:id="@+id/PP_QA3_CNT"
                     android:paddingHorizontal="10dp"
-                    android:text="188"
                     android:textSize="18dp" />
 
 
@@ -281,7 +270,6 @@
                     android:textColor="#424242"
                     android:id="@+id/PP_QA3_SG"
                     android:paddingHorizontal="10dp"
-                    android:text="0"
                     android:textSize="18dp" />
 
             </TableRow>
@@ -737,7 +725,7 @@
                         android:background="@android:color/white"
                         android:padding="5dp"
                         android:textColor="#424242"
-                        android:id="@+id/PP_QB2_PID"
+                        android:id="@+id/PP_QC2_PID"
                         android:paddingHorizontal="10dp"
                         android:text="0"
                         android:textSize="18dp" />

@@ -83,7 +83,7 @@ public class QuadPropFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        URL = getString(R.string.IP_L1);
+        URL = getString(R.string.IP_QP);
         jsonrequest();
 
         // Inflate the layout for this fragment

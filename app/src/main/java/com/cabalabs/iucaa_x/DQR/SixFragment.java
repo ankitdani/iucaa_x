@@ -96,7 +96,7 @@ public class SixFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        URL = getString(R.string.IP_L1);
+        URL = getString(R.string.IP_PP);
         jsonrequest();
 
         // Inflate the layout for this fragment
@@ -189,110 +189,110 @@ public class SixFragment extends Fragment{
 
                             textView = (TextView) getView().findViewById(R.id.PP_QA1_DID);
                             textView.setText(PP_QA1_DID);
-                            textView1 = (TextView) getView().findViewById(R.id.PP_QA1_DID);
+                            textView1 = (TextView) getView().findViewById(R.id.PP_QA1_PID);
                             textView1.setText(PP_QA1_PID);
-                            textView2 = (TextView) getView().findViewById(R.id.PP_QA1_DID);
+                            textView2 = (TextView) getView().findViewById(R.id.PP_QA1_CNT);
                             textView2.setText(PP_QA1_CNT);
-                            textView3 = (TextView) getView().findViewById(R.id.PP_QA1_DID);
+                            textView3 = (TextView) getView().findViewById(R.id.PP_QA1_SG);
                             textView3.setText(PP_QA1_SG);
 
                             textView4 = (TextView) getView().findViewById(R.id.PP_QA2_DID);
                             textView4.setText(PP_QA2_DID);
-                            textView5 = (TextView) getView().findViewById(R.id.PP_QA2_DID);
+                            textView5 = (TextView) getView().findViewById(R.id.PP_QA2_PID);
                             textView5.setText(PP_QA2_PID);
-                            textView6 = (TextView) getView().findViewById(R.id.PP_QA2_DID);
+                            textView6 = (TextView) getView().findViewById(R.id.PP_QA2_CNT);
                             textView6.setText(PP_QA2_CNT);
-                            textView7 = (TextView) getView().findViewById(R.id.PP_QA2_DID);
+                            textView7 = (TextView) getView().findViewById(R.id.PP_QA2_SG);
                             textView7.setText(PP_QA2_SG);
 
                             textView8 = (TextView) getView().findViewById(R.id.PP_QA3_DID);
                             textView8.setText(PP_QA3_DID);
-                            textView9 = (TextView) getView().findViewById(R.id.PP_QA3_DID);
+                            textView9 = (TextView) getView().findViewById(R.id.PP_QA3_PID);
                             textView9.setText(PP_QA3_PID);
-                            textView10 = (TextView) getView().findViewById(R.id.PP_QA3_DID);
+                            textView10 = (TextView) getView().findViewById(R.id.PP_QA3_CNT);
                             textView10.setText(PP_QA3_CNT);
-                            textView11 = (TextView) getView().findViewById(R.id.PP_QA3_DID);
+                            textView11 = (TextView) getView().findViewById(R.id.PP_QA3_SG);
                             textView11.setText(PP_QA3_SG);
 
                             textView12 = (TextView) getView().findViewById(R.id.PP_QB1_DID);
                             textView12.setText(PP_QB1_DID);
-                            textView13 = (TextView) getView().findViewById(R.id.PP_QB1_DID);
+                            textView13 = (TextView) getView().findViewById(R.id.PP_QB1_PID);
                             textView13.setText(PP_QB1_PID);
-                            textView14 = (TextView) getView().findViewById(R.id.PP_QB1_DID);
+                            textView14 = (TextView) getView().findViewById(R.id.PP_QB1_CNT);
                             textView14.setText(PP_QB1_CNT);
-                            textView15 = (TextView) getView().findViewById(R.id.PP_QB1_DID);
+                            textView15 = (TextView) getView().findViewById(R.id.PP_QB1_SG);
                             textView15.setText(PP_QB1_SG);
 
                             textView16 = (TextView) getView().findViewById(R.id.PP_QB2_DID);
                             textView16.setText(PP_QB2_DID);
-                            textView17 = (TextView) getView().findViewById(R.id.PP_QB2_DID);
+                            textView17 = (TextView) getView().findViewById(R.id.PP_QB2_PID);
                             textView17.setText(PP_QB2_PID);
-                            textView18 = (TextView) getView().findViewById(R.id.PP_QB2_DID);
+                            textView18 = (TextView) getView().findViewById(R.id.PP_QB2_CNT);
                             textView18.setText(PP_QB2_CNT);
-                            textView19 = (TextView) getView().findViewById(R.id.PP_QB2_DID);
+                            textView19 = (TextView) getView().findViewById(R.id.PP_QB2_SG);
                             textView19.setText(PP_QB2_SG);
 
                             textView20 = (TextView) getView().findViewById(R.id.PP_QB3_DID);
                             textView20.setText(PP_QB3_DID);
-                            textView21 = (TextView) getView().findViewById(R.id.PP_QB3_DID);
+                            textView21 = (TextView) getView().findViewById(R.id.PP_QB3_PID);
                             textView21.setText(PP_QB3_PID);
-                            textView22 = (TextView) getView().findViewById(R.id.PP_QB3_DID);
+                            textView22 = (TextView) getView().findViewById(R.id.PP_QB3_CNT);
                             textView22.setText(PP_QB3_CNT);
-                            textView23 = (TextView) getView().findViewById(R.id.PP_QB3_DID);
+                            textView23 = (TextView) getView().findViewById(R.id.PP_QB3_SG);
                             textView23.setText(PP_QB3_SG);
 
                             textView24 = (TextView) getView().findViewById(R.id.PP_QC1_DID);
                             textView24.setText(PP_QC1_DID);
-                            textView25 = (TextView) getView().findViewById(R.id.PP_QC1_DID);
+                            textView25 = (TextView) getView().findViewById(R.id.PP_QC1_PID);
                             textView25.setText(PP_QC1_PID);
-                            textView26 = (TextView) getView().findViewById(R.id.PP_QC1_DID);
+                            textView26 = (TextView) getView().findViewById(R.id.PP_QC1_CNT);
                             textView26.setText(PP_QC1_CNT);
-                            textView27 = (TextView) getView().findViewById(R.id.PP_QC1_DID);
+                            textView27 = (TextView) getView().findViewById(R.id.PP_QC1_SG);
                             textView27.setText(PP_QC1_SG);
 
                             textView28 = (TextView) getView().findViewById(R.id.PP_QC2_DID);
                             textView28.setText(PP_QC2_DID);
-                            textView29 = (TextView) getView().findViewById(R.id.PP_QC2_DID);
+                            textView29 = (TextView) getView().findViewById(R.id.PP_QC2_PID);
                             textView29.setText(PP_QC2_PID);
-                            textView30 = (TextView) getView().findViewById(R.id.PP_QC2_DID);
+                            textView30 = (TextView) getView().findViewById(R.id.PP_QC2_CNT);
                             textView30.setText(PP_QC2_CNT);
-                            textView31 = (TextView) getView().findViewById(R.id.PP_QC2_DID);
+                            textView31 = (TextView) getView().findViewById(R.id.PP_QC2_SG);
                             textView31.setText(PP_QC2_SG);
 
                             textView32 = (TextView) getView().findViewById(R.id.PP_QC3_DID);
                             textView32.setText(PP_QC3_DID);
-                            textView33 = (TextView) getView().findViewById(R.id.PP_QC3_DID);
+                            textView33 = (TextView) getView().findViewById(R.id.PP_QC3_PID);
                             textView33.setText(PP_QC3_PID);
-                            textView34 = (TextView) getView().findViewById(R.id.PP_QC3_DID);
+                            textView34 = (TextView) getView().findViewById(R.id.PP_QC3_CNT);
                             textView34.setText(PP_QC3_CNT);
-                            textView35 = (TextView) getView().findViewById(R.id.PP_QC3_DID);
+                            textView35 = (TextView) getView().findViewById(R.id.PP_QC3_SG);
                             textView35.setText(PP_QC3_SG);
 
                             textView36 = (TextView) getView().findViewById(R.id.PP_QD1_DID);
                             textView36.setText(PP_QD1_DID);
-                            textView37 = (TextView) getView().findViewById(R.id.PP_QD1_DID);
+                            textView37 = (TextView) getView().findViewById(R.id.PP_QD1_PID);
                             textView37.setText(PP_QD1_PID);
-                            textView38 = (TextView) getView().findViewById(R.id.PP_QD1_DID);
+                            textView38 = (TextView) getView().findViewById(R.id.PP_QD1_CNT);
                             textView38.setText(PP_QD1_CNT);
-                            textView39 = (TextView) getView().findViewById(R.id.PP_QD1_DID);
+                            textView39 = (TextView) getView().findViewById(R.id.PP_QD1_SG);
                             textView39.setText(PP_QD1_SG);
 
                             textView40 = (TextView) getView().findViewById(R.id.PP_QD2_DID);
                             textView40.setText(PP_QD2_DID);
-                            textView41 = (TextView) getView().findViewById(R.id.PP_QD2_DID);
+                            textView41 = (TextView) getView().findViewById(R.id.PP_QD2_PID);
                             textView41.setText(PP_QD2_PID);
-                            textView42 = (TextView) getView().findViewById(R.id.PP_QD2_DID);
+                            textView42 = (TextView) getView().findViewById(R.id.PP_QD2_CNT);
                             textView42.setText(PP_QD2_CNT);
-                            textView43 = (TextView) getView().findViewById(R.id.PP_QD2_DID);
+                            textView43 = (TextView) getView().findViewById(R.id.PP_QD2_SG);
                             textView43.setText(PP_QD2_SG);
 
                             textView44 = (TextView) getView().findViewById(R.id.PP_QD3_DID);
                             textView44.setText(PP_QD3_DID);
-                            textView45 = (TextView) getView().findViewById(R.id.PP_QD3_DID);
+                            textView45 = (TextView) getView().findViewById(R.id.PP_QD3_PID);
                             textView45.setText(PP_QD3_PID);
-                            textView46 = (TextView) getView().findViewById(R.id.PP_QD3_DID);
+                            textView46 = (TextView) getView().findViewById(R.id.PP_QD3_CNT);
                             textView46.setText(PP_QD3_CNT);
-                            textView47 = (TextView) getView().findViewById(R.id.PP_QD3_DID);
+                            textView47 = (TextView) getView().findViewById(R.id.PP_QD3_SG);
                             textView47.setText(PP_QD3_SG);
 
                         }
