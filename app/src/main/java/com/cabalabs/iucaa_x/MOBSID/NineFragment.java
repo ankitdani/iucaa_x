@@ -1,5 +1,6 @@
 package com.cabalabs.iucaa_x.MOBSID;
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -30,7 +31,6 @@ public class NineFragment extends Fragment{
         // Required empty public constructor
     }
 
-
     String URL;
     JsonArrayRequest request;
     RequestQueue requestQueue;
@@ -57,9 +57,9 @@ public class NineFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        jsonimagerequest();
 
-        URL = getString(R.string.IP_CRIMG);
+        URL = getString(R.string.mg_IP_CRIMG);
+        jsonimagerequest();
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_nine, container, false);
@@ -105,12 +105,10 @@ public class NineFragment extends Fragment{
                             imageView1 = (ImageView) getView().findViewById(R.id.img2);
                             imageView2 = (ImageView) getView().findViewById(R.id.img3);
                             imageView3 = (ImageView) getView().findViewById(R.id.img4);
-
                             imageView4 = (ImageView) getView().findViewById(R.id.img5);
                             imageView5 = (ImageView) getView().findViewById(R.id.img6);
                             imageView6 = (ImageView) getView().findViewById(R.id.img7);
                             imageView7 = (ImageView) getView().findViewById(R.id.img8);
-
                             imageView8 = (ImageView) getView().findViewById(R.id.img9);
                             imageView9 = (ImageView) getView().findViewById(R.id.img10);
                             imageView10 = (ImageView) getView().findViewById(R.id.img11);

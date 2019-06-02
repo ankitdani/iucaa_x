@@ -4,16 +4,26 @@
     <string name="IP_Summary">http://192.168.43.12:8000/iucaaapp</string>
     <string name="IP_OBSInfo">http://192.168.43.12:8000/dqrreport/obsinfo</string>
     <string name="IP_DQR_Stats">http://192.168.43.12:8000/dqrreport/dqrstats</string>
-
     <string name="IP_L1">http://192.168.43.12:8000/dqrreport/datainteg</string>
     <string name="IP_DS">http://192.168.43.12:8000/dqrreport/datasat</string>
     <string name="IP_NDF">http://192.168.43.12:8000/dqrreport/noisefrag</string>
     <string name="IP_DPH">http://192.168.43.12:8000/dqrreport/dph</string>
-
     <string name="IP_PP">http://192.168.43.12:8000/dqrreport/pixelprop</string>
     <string name="IP_QP">http://192.168.43.12:8000/dqrreport/quadprop</string>
     <string name="IP_CRIMG">http://192.168.43.12:8000/dqrreport/countrate</string>
     <string name="IP_HK">http://192.168.43.12:8000/dqrreport/housekeeping</string>
+
+    <string name="mg_IP_Summary">http://192.168.43.12:8000/mg_iucaaapp</string>
+    <string name="mg_IP_OBSInfo">http://192.168.43.12:8000/mg_dqrreport/obsinfo</string>
+    <string name="mg_IP_DQR_Stats">http://192.168.43.12:8000/mg_dqrreport/dqrstats</string>
+    <string name="mg_IP_L1">http://192.168.43.12:8000/mg_dqrreport/datainteg</string>
+    <string name="mg_IP_DS">http://192.168.43.12:8000/mg_dqrreport/datasat</string>
+    <string name="mg_IP_NDF">http://192.168.43.12:8000/mg_dqrreport/noisefrag</string>
+    <string name="mg_IP_DPH">http://192.168.43.12:8000/mg_dqrreport/dph</string>
+    <string name="mg_IP_PP">http://192.168.43.12:8000/mg_dqrreport/pixelprop</string>
+    <string name="mg_IP_QP">http://192.168.43.12:8000/mg_dqrreport/quadprop</string>
+    <string name="mg_IP_CRIMG">http://192.168.43.12:8000/mg_dqrreport/countrate</string>
+    <string name="mg_IP_HK">http://192.168.43.12:8000/mg_dqrreport/housekeeping</string>
 
 
     <string name="category">Category</string>
@@ -40,17 +50,17 @@
     <string name="start">GOT IT</string>
 
 
-    <string name="slide_1_title">Feature 1</string>
-    <string name="slide_1_desc">Description</string>
+    <string name="slide_1_title">One Touch ASTROSAT Data</string>
+    <string name="slide_1_desc">All of ASTROSAT-CZTI data in one place</string>
 
-    <string name="slide_2_title">Feature 2</string>
-    <string name="slide_2_desc">Description</string>
+    <string name="slide_2_title">Dynamic DQR Retrieval</string>
+    <string name="slide_2_desc">Real-Time fetching of Data Quality Reports</string>
 
-    <string name="slide_3_title">Feature 3</string>
-    <string name="slide_3_desc">Description</string>
+    <string name="slide_3_title">Fast and Smooth</string>
+    <string name="slide_3_desc">Lightweight Django Framework for a Seamless Experience</string>
 
-    <string name="slide_4_title">Feature 4</string>
-    <string name="slide_4_desc">Description</string>
+    <string name="slide_4_title">Simple Intuitive Design</string>
+    <string name="slide_4_desc">Easy and Comprehensive Data Analysis</string>
 
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>

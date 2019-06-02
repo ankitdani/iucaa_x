@@ -1,9 +1,15 @@
 package com.cabalabs.iucaa_x.MOBSID;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,42 +19,166 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.cabalabs.iucaa_x.MGPROLG.MergedProLog;
 import com.cabalabs.iucaa_x.MainActivity;
 import com.cabalabs.iucaa_x.PROBPGS.ProblemPg;
 import com.cabalabs.iucaa_x.PXHIST.PixHistory;
 import com.cabalabs.iucaa_x.R;
+import com.cabalabs.iucaa_x.RecyclerViewAdapter;
+import com.cabalabs.iucaa_x.Summary;
 import com.cabalabs.iucaa_x.THRESHIST.ModThresAct;
 import com.cabalabs.iucaa_x.UOBSID.UpOBSID;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MergOBSID extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        SwipeRefreshLayout.OnRefreshListener {
+
+    String URL;
+
+    JsonArrayRequest request;
+    RequestQueue requestQueue;
+
+    List<Summary> listSumm = new ArrayList<Summary>();
+    //List<Integer> ID = new ArrayList<Integer>();
+    RecyclerView recyclerView;
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_merg_obsid);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_main);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        URL = getString(R.string.mg_IP_Summary);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        if(isOnline()){
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                    MergOBSID.this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            drawer.addDrawerListener(toggle);
+            toggle.syncState();
+
+            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(MergOBSID.this);
+
+            recyclerView = findViewById(R.id.recyclerviewid);
+            jsonrequest();
+        }
+        else{
+            Toast.makeText(MergOBSID.this, "No Internet Connection!", Toast.LENGTH_SHORT).show();
+
+        }
+
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.Swipe);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                if(isOnline()){
+
+                    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+                    setSupportActionBar(toolbar);
+
+                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                            MergOBSID.this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                    drawer.addDrawerListener(toggle);
+                    toggle.syncState();
+
+                    NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                    navigationView.setNavigationItemSelectedListener(MergOBSID.this);
+
+                    recyclerView = findViewById(R.id.recyclerviewid);
+                    listSumm.clear();
+                    jsonrequest();
+                }
+                else{
+                    Toast.makeText(MergOBSID.this, "No Internet Connection!", Toast.LENGTH_SHORT).show();
+                }
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        swipeRefreshLayout.setRefreshing(false);        //to stop refreshing
+                    }
+                }, 1000);
+            }
+        });
+    }
+
+    public boolean isOnline(){
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting();
+    }
+
+    private void jsonrequest() {
+
+        request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+
+                JSONObject jsonObject = null;
+
+                for(int i=0; i<response.length(); i++){
+
+                    try{
+
+                        jsonObject = response.getJSONObject(i);
+
+                        Summary summary = new Summary();
+                        summary.setUID(jsonObject.getString("UID"));
+                        summary.setFolder(jsonObject.getString("folder"));
+//                        summary.setOBSID(jsonObject.getString("OBSID"));
+                        summary.setObserver(jsonObject.getString("Observer"));
+//                        summary.setObject(jsonObject.getString("Object"));
+//                        summary.setRA(jsonObject.getString("RA"));
+//                        summary.setDecr(jsonObject.getString("Decr"));
+//                        summary.setExposure_time(jsonObject.getString("Exposure_time"));
+                        listSumm.add(summary);
+
+                    }catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                setuprecyclerview(listSumm);
+
+            }
+        },new Response.ErrorListener(){
+            @Override
+            public void onErrorResponse(VolleyError error){
+
+            }
+        });
+
+        requestQueue = Volley.newRequestQueue(MergOBSID.this);
+        requestQueue.add(request);
+    }
+
+    private void setuprecyclerview(List<Summary> listSumm) {
+
+        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this,listSumm);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(myadapter);
     }
 
     @Override
@@ -120,5 +250,10 @@ public class MergOBSID extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onRefresh() {
+
     }
 }

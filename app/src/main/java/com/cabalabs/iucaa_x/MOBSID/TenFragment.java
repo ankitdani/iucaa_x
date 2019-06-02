@@ -31,7 +31,7 @@ public class TenFragment extends Fragment{
     }
 
 
-     String URL;
+    String URL;
     JsonArrayRequest request;
     RequestQueue requestQueue;
 
@@ -61,7 +61,7 @@ public class TenFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        URL = getString(R.string.IP_HK);
+        URL = getString(R.string.mg_IP_HK);
         jsonimagerequest();
 
         // Inflate the layout for this fragment

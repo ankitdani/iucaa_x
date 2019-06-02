@@ -57,9 +57,8 @@ public class EightFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        URL = getString(R.string.mg_IP_CRIMG);
         jsonimagerequest();
-
-        URL = getString(R.string.IP_CRIMG);
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_eight, container, false);
@@ -110,6 +109,7 @@ public class EightFragment extends Fragment{
                             imageView5 = (ImageView) getView().findViewById(R.id.img6);
                             imageView6 = (ImageView) getView().findViewById(R.id.img7);
                             imageView7 = (ImageView) getView().findViewById(R.id.img8);
+
 
                             imageView8 = (ImageView) getView().findViewById(R.id.img9);
                             imageView9 = (ImageView) getView().findViewById(R.id.img10);

@@ -52,7 +52,7 @@ public class TwoFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        URL = getString(R.string.IP_DQR_Stats);
+        URL = getString(R.string.mg_IP_DQR_Stats);
         jsonrequest();
 
         // Inflate the layout for this fragment

@@ -36,6 +36,7 @@ public class SevenFragment extends Fragment{
     RequestQueue requestQueue;
 
 
+
     ImageView imageView;
     ImageView imageView1;
     ImageView imageView2;
@@ -50,7 +51,7 @@ public class SevenFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        URL = getString(R.string.IP_DPH);
+        URL = getString(R.string.mg_IP_DPH);
         jsonimagerequest();
 
         // Inflate the layout for this fragment

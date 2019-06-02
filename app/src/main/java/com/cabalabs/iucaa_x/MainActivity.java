@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         SwipeRefreshLayout.OnRefreshListener {
 
-     String URL;
+    String URL;
 
     JsonArrayRequest request;
     RequestQueue requestQueue;

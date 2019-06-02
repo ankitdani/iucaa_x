@@ -30,6 +30,7 @@
         <activity
             android:name=".PROBPGS.ProblemPg"
             android:label="@string/title_activity_problem_pg"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MGPROLG.MergedProLog"

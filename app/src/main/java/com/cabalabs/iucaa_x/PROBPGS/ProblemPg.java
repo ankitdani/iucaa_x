@@ -13,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.cabalabs.iucaa_x.MGPROLG.MergedProLog;
 import com.cabalabs.iucaa_x.MOBSID.MergOBSID;
@@ -25,8 +29,15 @@ import com.cabalabs.iucaa_x.UOBSID.UpOBSID;
 public class ProblemPg extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private WebView webView;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_problem_pg);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -40,6 +51,13 @@ public class ProblemPg extends AppCompatActivity
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
+
+        webView = (WebView)findViewById(R.id.webview);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://www.iucaa.in/~astrosat/czti_dqr/problem.html");
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -57,7 +75,13 @@ public class ProblemPg extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+
+            if(webView.canGoBack()){
+                webView.goBack();
+            }
+            else {
+                super.onBackPressed();
+            }
         }
     }
 
