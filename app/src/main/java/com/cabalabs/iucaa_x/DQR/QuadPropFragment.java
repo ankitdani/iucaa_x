@@ -114,123 +114,123 @@ public class QuadPropFragment extends Fragment{
 
                         if(uid.equals(uidprev)) {
 
-                            String QP_QA1_MN = jsonObject.getString("PP_QA1_DID");
-                            String QP_QA1_MD = jsonObject.getString("PP_QA1_PID");
-                            String QP_QA1_SG = jsonObject.getString("PP_QA1_SG");
+                            String QP_QA1_MN = jsonObject.getString("QP_QA1_MN");
+                            String QP_QA1_MD = jsonObject.getString("QP_QA1_MD");
+                            String QP_QA1_SG = jsonObject.getString("QP_QA1_SG");
 
-                            String QP_QA2_MN = jsonObject.getString("PP_QA2_DID");
-                            String QP_QA2_MD = jsonObject.getString("PP_QA2_PID");
-                            String QP_QA2_SG = jsonObject.getString("PP_QA2_SG");
+                            String QP_QA2_MN = jsonObject.getString("QP_QA2_MN");
+                            String QP_QA2_MD = jsonObject.getString("QP_QA2_MD");
+                            String QP_QA2_SG = jsonObject.getString("QP_QA2_SG");
 
-                            String QP_QA3_MN = jsonObject.getString("PP_QA3_DID");
-                            String QP_QA3_MD = jsonObject.getString("PP_QA3_PID");
-                            String QP_QA3_SG = jsonObject.getString("PP_QA3_SG");
+                            String QP_QA3_MN = jsonObject.getString("QP_QA3_MN");
+                            String QP_QA3_MD = jsonObject.getString("QP_QA3_MD");
+                            String QP_QA3_SG = jsonObject.getString("QP_QA3_SG");
 
-                            String QP_QB1_MN = jsonObject.getString("PP_QB1_DID");
-                            String QP_QB1_MD = jsonObject.getString("PP_QB1_PID");
-                            String QP_QB1_SG = jsonObject.getString("PP_QB1_SG");
+                            String QP_QB1_MN = jsonObject.getString("QP_QB1_MN");
+                            String QP_QB1_MD = jsonObject.getString("QP_QB1_MD");
+                            String QP_QB1_SG = jsonObject.getString("QP_QB1_SG");
 
-                            String QP_QB2_MN = jsonObject.getString("PP_QB2_DID");
-                            String QP_QB2_MD = jsonObject.getString("PP_QB2_PID");
-                            String QP_QB2_SG = jsonObject.getString("PP_QB2_SG");
+                            String QP_QB2_MN = jsonObject.getString("QP_QB2_MN");
+                            String QP_QB2_MD = jsonObject.getString("QP_QB2_MD");
+                            String QP_QB2_SG = jsonObject.getString("QP_QB2_SG");
 
-                            String QP_QB3_MN = jsonObject.getString("PP_QB3_DID");
-                            String QP_QB3_MD = jsonObject.getString("PP_QB3_PID");
-                            String QP_QB3_SG = jsonObject.getString("PP_QB3_SG");
+                            String QP_QB3_MN = jsonObject.getString("QP_QB3_MN");
+                            String QP_QB3_MD = jsonObject.getString("QP_QB3_MD");
+                            String QP_QB3_SG = jsonObject.getString("QP_QB3_SG");
 
-                            String QP_QC1_MN = jsonObject.getString("PP_QC1_DID");
-                            String QP_QC1_MD = jsonObject.getString("PP_QC1_PID");
-                            String QP_QC1_SG = jsonObject.getString("PP_QC1_SG");
+                            String QP_QC1_MN = jsonObject.getString("QP_QC1_MN");
+                            String QP_QC1_MD = jsonObject.getString("QP_QC1_MD");
+                            String QP_QC1_SG = jsonObject.getString("QP_QC1_SG");
 
-                            String QP_QC2_MN = jsonObject.getString("PP_QC2_DID");
-                            String QP_QC2_MD = jsonObject.getString("PP_QC2_PID");
-                            String QP_QC2_SG = jsonObject.getString("PP_QC2_SG");
+                            String QP_QC2_MN = jsonObject.getString("QP_QC2_MN");
+                            String QP_QC2_MD = jsonObject.getString("QP_QC2_MD");
+                            String QP_QC2_SG = jsonObject.getString("QP_QC2_SG");
 
-                            String QP_QC3_MN = jsonObject.getString("PP_QC3_DID");
-                            String QP_QC3_MD = jsonObject.getString("PP_QC3_PID");
-                            String QP_QC3_SG = jsonObject.getString("PP_QC3_SG");
+                            String QP_QC3_MN = jsonObject.getString("QP_QC3_MN");
+                            String QP_QC3_MD = jsonObject.getString("QP_QC3_MD");
+                            String QP_QC3_SG = jsonObject.getString("QP_QC3_SG");
 
-                            String QP_QD1_MN = jsonObject.getString("PP_QD1_DID");
-                            String QP_QD1_MD = jsonObject.getString("PP_QD1_PID");
-                            String QP_QD1_SG = jsonObject.getString("PP_QD1_SG");
+                            String QP_QD1_MN = jsonObject.getString("QP_QD1_MN");
+                            String QP_QD1_MD = jsonObject.getString("QP_QD1_MD");
+                            String QP_QD1_SG = jsonObject.getString("QP_QD1_SG");
 
-                            String QP_QD2_MN = jsonObject.getString("PP_QD2_DID");
-                            String QP_QD2_MD = jsonObject.getString("PP_QD2_PID");
-                            String QP_QD2_SG = jsonObject.getString("PP_QD2_SG");
+                            String QP_QD2_MN = jsonObject.getString("QP_QD2_MN");
+                            String QP_QD2_MD = jsonObject.getString("QP_QD2_MD");
+                            String QP_QD2_SG = jsonObject.getString("QP_QD2_SG");
 
-                            String QP_QD3_MN = jsonObject.getString("PP_QD3_DID");
-                            String QP_QD3_MD = jsonObject.getString("PP_QD3_PID");
-                            String QP_QD3_SG = jsonObject.getString("PP_QD3_SG");
+                            String QP_QD3_MN = jsonObject.getString("QP_QD3_MN");
+                            String QP_QD3_MD = jsonObject.getString("QP_QD3_MD");
+                            String QP_QD3_SG = jsonObject.getString("QP_QD3_SG");
 
 
                             textView = (TextView) getView().findViewById(R.id.QP_QA1_MN);
                             textView.setText(QP_QA1_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QA1_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QA1_MD);
                             textView.setText(QP_QA1_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QA1_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QA1_SG);
                             textView.setText(QP_QA1_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QA2_MN);
                             textView.setText(QP_QA2_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QA2_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QA2_MD);
                             textView.setText(QP_QA2_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QA2_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QA2_SG);
                             textView.setText(QP_QA2_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QA3_MN);
                             textView.setText(QP_QA3_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QA3_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QA3_MD);
                             textView.setText(QP_QA3_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QA3_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QA3_SG);
                             textView.setText(QP_QA3_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QB1_MN);
                             textView.setText(QP_QB1_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QB1_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QB1_MD);
                             textView.setText(QP_QB1_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QB1_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QB1_SG);
                             textView.setText(QP_QB1_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QB2_MN);
                             textView.setText(QP_QB2_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QB2_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QB2_MD);
                             textView.setText(QP_QB2_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QB2_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QB2_SG);
                             textView.setText(QP_QB2_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QB3_MN);
                             textView.setText(QP_QB3_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QB3_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QB3_MD);
                             textView.setText(QP_QB3_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QB3_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QB3_SG);
                             textView.setText(QP_QB3_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QC1_MN);
                             textView.setText(QP_QC1_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QC1_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QC1_MD);
                             textView.setText(QP_QC1_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QC1_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QC1_SG);
                             textView.setText(QP_QC1_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QC2_MN);
                             textView.setText(QP_QC2_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QC2_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QC2_MD);
                             textView.setText(QP_QC2_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QC2_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QC2_SG);
                             textView.setText(QP_QC2_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QC3_MN);
                             textView.setText(QP_QC3_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QC3_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QC3_MD);
                             textView.setText(QP_QC3_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QC3_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QC3_SG);
                             textView.setText(QP_QC3_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QD1_MN);
                             textView.setText(QP_QD1_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QD1_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QD1_MD);
                             textView.setText(QP_QD1_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QD1_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QD1_SG);
                             textView.setText(QP_QD1_SG);
 
                             textView = (TextView) getView().findViewById(R.id.QP_QD2_MN);
@@ -242,9 +242,9 @@ public class QuadPropFragment extends Fragment{
 
                             textView = (TextView) getView().findViewById(R.id.QP_QD3_MN);
                             textView.setText(QP_QD3_MN);
-                            textView = (TextView) getView().findViewById(R.id.QP_QD3_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QD3_MD);
                             textView.setText(QP_QD3_MD);
-                            textView = (TextView) getView().findViewById(R.id.QP_QD3_MN);
+                            textView = (TextView) getView().findViewById(R.id.QP_QD3_SG);
                             textView.setText(QP_QD3_SG);
 
                         }
