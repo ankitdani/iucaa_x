@@ -111,6 +111,7 @@ public class EightFragment extends Fragment{
                             imageView6 = (ImageView) getView().findViewById(R.id.img7);
                             imageView7 = (ImageView) getView().findViewById(R.id.img8);
 
+
                             imageView8 = (ImageView) getView().findViewById(R.id.img9);
                             imageView9 = (ImageView) getView().findViewById(R.id.img10);
                             imageView10 = (ImageView) getView().findViewById(R.id.img11);
