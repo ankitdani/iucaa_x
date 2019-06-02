@@ -545,7 +545,6 @@
                         android:textColor="#424242"
                         android:id="@+id/PP_QB3_SG"
                         android:paddingHorizontal="10dp"
-                        android:text="0"
                         android:textSize="18dp" />
 
                 </TableRow>

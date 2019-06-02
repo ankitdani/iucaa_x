@@ -155,7 +155,7 @@ public class SixFragment extends Fragment{
                             String PP_QB3_DID = jsonObject.getString("PP_QB3_DID");
                             String PP_QB3_PID = jsonObject.getString("PP_QB3_PID");
                             String PP_QB3_CNT = jsonObject.getString("PP_QB3_CNT");
-                            String PP_QB3_SG = jsonObject.getString("PP_QA3_SG");
+                            String PP_QB3_SG = jsonObject.getString("PP_QB3_SG");
 
                             String PP_QC1_DID = jsonObject.getString("PP_QC1_DID");
                             String PP_QC1_PID = jsonObject.getString("PP_QC1_PID");

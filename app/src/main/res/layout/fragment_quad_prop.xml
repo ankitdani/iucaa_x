@@ -176,6 +176,7 @@
 
 
                     <TextView
+                        android:id="@+id/QP_QA2_MN"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginHorizontal="1dp"
@@ -183,10 +184,9 @@
                         android:layout_weight="1"
                         android:background="@android:color/white"
                         android:padding="5dp"
-                        android:textColor="#424242"
-                        android:id="@+id/QP_QA2_MN"
                         android:paddingHorizontal="10dp"
                         android:text="0"
+                        android:textColor="#424242"
                         android:textSize="18dp" />
 
                     <TextView
