@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">iucaa_x</string>
+    <string name="app_name">ASTROSAT DQR</string>
 
     <string name="IP_Summary">http://192.168.43.12:8000/iucaaapp</string>
     <string name="IP_OBSInfo">http://192.168.43.12:8000/dqrreport/obsinfo</string>

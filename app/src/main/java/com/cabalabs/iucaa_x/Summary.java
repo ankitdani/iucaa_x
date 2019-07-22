@@ -1,5 +1,10 @@
 package com.cabalabs.iucaa_x;
 
+
+/**
+ * Contains All the Data Fields to be fetched For DQRs
+ * All getters and setters are defined
+ */
 public class Summary {
 
     private String id ;
@@ -11,13 +16,11 @@ public class Summary {
     private String RA ;
     private String Decr;
     private String Exposure_time;
-    //private String image_url = "http://www.iucaa.in/~varunb/ASTROSAT_LOGO.jpg";
 
     public Summary() {
-
     }
 
-    public Summary(String id, String UID, String folder, String OBSID, String Observer, String Object, String RA, String Decr, String Exposure_time, String image_url) {
+    public Summary(String id, String UID, String folder, String OBSID, String Observer, String Object, String RA, String Decr, String Exposure_time) {
         this.id = id;
         this.UID = UID;
         this.folder = folder;
@@ -28,8 +31,10 @@ public class Summary {
         this.Decr = Decr;
         this.Exposure_time = Exposure_time;
 
-        //this.image_url = image_url;
+
     }
+
+
 
     public String getId() {
         return id;

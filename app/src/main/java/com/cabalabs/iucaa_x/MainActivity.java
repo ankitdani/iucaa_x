@@ -39,10 +39,17 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**Remaining Java Doc
+ * Class Contains All the Functions to Set Up a Recycler View To fetch The Summary of Astrosat DQRs
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         SwipeRefreshLayout.OnRefreshListener {
 
+    /**
+     *
+     */
     String URL;
 
     JsonArrayRequest request;
@@ -127,6 +134,12 @@ public class MainActivity extends AppCompatActivity
         return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting();
     }
 
+
+    /**
+     * Fetches JSON Array as a response from Django REST API
+     *
+     */
+
     private void jsonrequest() {
 
         request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
@@ -139,17 +152,17 @@ public class MainActivity extends AppCompatActivity
 
                     try{
 
+                        //jsonObject to fetch the related response from the JSON array
                         jsonObject = response.getJSONObject(i);
 
                         Summary summary = new Summary();
+
+                        // Fetches the required Data  as specfied in getString parameter
                         summary.setUID(jsonObject.getString("UID"));
                         summary.setFolder(jsonObject.getString("folder"));
-//                        summary.setOBSID(jsonObject.getString("OBSID"));
                         summary.setObserver(jsonObject.getString("Observer"));
-//                        summary.setObject(jsonObject.getString("Object"));
-//                        summary.setRA(jsonObject.getString("RA"));
-//                        summary.setDecr(jsonObject.getString("Decr"));
-//                        summary.setExposure_time(jsonObject.getString("Exposure_time"));
+
+                        //Adds to the Recycler View
                         listSumm.add(summary);
 
                     }catch (JSONException e) {
@@ -167,6 +180,8 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        //Request Queue for Fetching the response using Google Volley
+
         requestQueue = Volley.newRequestQueue(MainActivity.this);
         requestQueue.add(request);
     }
@@ -178,6 +193,9 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(myadapter);
     }
+
+
+    // Default Action Functions for a Navigation Drawer
 
     @Override
     public void onBackPressed() {
