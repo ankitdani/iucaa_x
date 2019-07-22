@@ -27,6 +27,10 @@ import com.cabalabs.iucaa_x.DQR.TwoFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/***
+ * This Activity is used to control the fragments used to fetch the Astrosat DQRs
+ */
 public class FragActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -38,6 +42,12 @@ public class FragActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frag);
 
+
+        /***
+         * Checks if the phone has active Internet Connection
+         * If yes then setup the view Pager
+         * else show a toast of No connection
+         */
         if(isOnline()) {
             viewPager = (ViewPager) findViewById(R.id.viewpager);
             setupViewPager(viewPager);
@@ -54,11 +64,21 @@ public class FragActivity extends AppCompatActivity {
         }
     }
 
+
+    /***
+     * Checks the Internet Connection and returns the status of connectivity
+     * @return True if the Device has an active Internet connection
+     */
     public boolean isOnline(){
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting();
     }
 
+
+    /**
+     * Function is used to set up the fragments to be used to display the DQR parametrs
+     * @param viewPager object to be set for each page(fragments)
+     */
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new OneFragment(), "Observation Info");
@@ -74,6 +94,10 @@ public class FragActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
+    /**
+     * Contains the Properties of the View Pager Adapter to set Up new Fragments
+     */
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
@@ -82,16 +106,33 @@ public class FragActivity extends AppCompatActivity {
             super(manager);
         }
 
+        /***
+         * Finds out the  Fragment From the Selected Position
+         * @param position selected position
+         * @return Selected fragment is returned
+         */
         @Override
         public Fragment getItem(int position) {
             Log.e("POSITION",String.valueOf(mFragmentList.get(position)));
             return mFragmentList.get(position);
         }
 
+        /**
+         * Getting the count of the total fragments
+         * @return
+         */
+
         @Override
         public int getCount() {
             return mFragmentList.size();
         }
+
+
+        /**
+         * Adds the fragment to the list
+         * @param fragment Contains the Fragment to be added
+         * @param title Contains the title of the Fragment
+         */
 
         public void addFrag(Fragment fragment, String title) {
             mFragmentList.add(fragment);
