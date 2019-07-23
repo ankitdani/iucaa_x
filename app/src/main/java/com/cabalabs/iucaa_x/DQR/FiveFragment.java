@@ -88,6 +88,14 @@ public class FiveFragment extends Fragment{
         return inflater.inflate(R.layout.fragment_five, container, false);
     }
 
+    /**
+     *Creates a new connection with the Django web server
+     *Sends request to the Django API for retrieving the 'Noise Dominated Fracrion' of a particular observation
+     *Retrieves JSON data and stores into a JSON object 'response'
+     *Retrieves images from their path and creates android imageview to display 'Marked Lightcurve'
+     *Compares the 'uid' attribute stored in JSON object that is combination of folder name and OBSID with the UID selected in the Main Activity
+     *When found adds the each textual attribute to the 'android textview' and displays required data in form of tables
+     */
     private void jsonimagerequest() {
 
         request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {

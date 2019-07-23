@@ -54,6 +54,13 @@ public class OneFragment extends Fragment{
         return inflater.inflate(R.layout.fragment_one, container, false);
     }
 
+    /**
+     *Creates a new connection with the Django web server
+     *Sends request to the Django API for retrieving the Observation Information of a particular observation
+     *Retrieves JSON data and stores into a JSON object 'response'
+     *Compares the uid attribute stored in JSON object that is combination of folder name and OBSID with the UID selected in the Main Activity
+     *When found adds each attribute to the android listview and displays required data
+     */
     private void jsonrequest() {
 
         request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
