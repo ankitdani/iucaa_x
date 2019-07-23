@@ -94,7 +94,7 @@ public class FiveFragment extends Fragment{
      *Retrieves JSON data and stores into a JSON object 'response'
      *Retrieves images from their path and creates android imageview to display 'Marked Lightcurve'
      *Compares the 'uid' attribute stored in JSON object that is combination of folder name and OBSID with the UID selected in the Main Activity
-     *When found adds the each textual attribute to the 'android textview' and displays required data in form of tables
+     *When found adds each textual attribute to the 'android textview' and displays required data in form of tables
      */
     private void jsonimagerequest() {
 
@@ -236,6 +236,9 @@ public class FiveFragment extends Fragment{
             }
         });
 
+        /**
+         * Unique request queue for each fragment that avoids dependency issues and reduces risk of failure
+         */
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         requestQueue.add(request);
     }
