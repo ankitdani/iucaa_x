@@ -103,6 +103,14 @@ public class SixFragment extends Fragment{
         return inflater.inflate(R.layout.fragment_six, container, false);
     }
 
+
+    /**
+     *Creates a new connection with the Django web server
+     *Sends request to the Django API for retrieving the 'Top Noisy Pixels' of a particular selected observation
+     *Retrieves JSON data and stores into a JSON object 'response'
+     *Compares the 'uid' attribute stored in JSON object that is combination of folder name and OBSID with the UID selected in the Main Activity
+     *When found adds each attribute to the 'android textview' and displays required data in form of tables
+     */
     private void jsonrequest() {
 
         request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
@@ -311,6 +319,9 @@ public class SixFragment extends Fragment{
             }
         });
 
+        /**
+         * Unique request queue for each fragment that avoids dependency issues and reduces risk of failure
+         */
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         requestQueue.add(request);
     }

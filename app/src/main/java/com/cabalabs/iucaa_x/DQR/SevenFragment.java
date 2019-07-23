@@ -62,8 +62,9 @@ public class SevenFragment extends Fragment{
 
     /**
      *Creates a new connection with the Django web server
-     *Sends request to the Django API for retrieving the 'Top Noisy Pixels' of a particular selected observation
+     *Sends request to the Django API for retrieving the 'Count Rate Plots and Images' of a particular selected observation
      *Retrieves JSON data and stores into a JSON object 'response'
+     *Retrieves images from their path and creates android imageview to display 'Count rate plots & Images' for each quadrant
      *Compares the 'uid' attribute stored in JSON object that is combination of folder name and OBSID with the UID selected in the Main Activity
      *When found adds each attribute to the 'android textview' and displays required data in form of tables
      */
@@ -130,6 +131,9 @@ public class SevenFragment extends Fragment{
             }
         });
 
+        /**
+         * Unique request queue for each fragment that avoids dependency issues and reduces risk of failure
+         */
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         requestQueue.add(request);
     }

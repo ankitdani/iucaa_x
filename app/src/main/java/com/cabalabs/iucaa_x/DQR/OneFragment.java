@@ -123,6 +123,9 @@ public class OneFragment extends Fragment{
             }
         });
 
+        /**
+         * Unique request queue for each fragment that avoids dependency issues and reduces risk of failure
+         */
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         requestQueue.add(request);
     }
