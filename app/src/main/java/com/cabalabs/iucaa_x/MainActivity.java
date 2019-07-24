@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**Remaining Java Doc
+/**
  * Class Contains All the Functions to Set Up a Recycler View To fetch The Summary of Astrosat DQRs
  */
 public class MainActivity extends AppCompatActivity
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity
     RequestQueue requestQueue;
 
     List<Summary> listSumm = new ArrayList<Summary>();
-    //List<Integer> ID = new ArrayList<Integer>();
     RecyclerView recyclerView;
     SwipeRefreshLayout swipeRefreshLayout;
 
@@ -92,6 +91,10 @@ public class MainActivity extends AppCompatActivity
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.Swipe);
 
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+
+            /**
+             * Refreshes the Contents of the Summary Page of DQRs
+             */
             @Override
             public void onRefresh() {
 

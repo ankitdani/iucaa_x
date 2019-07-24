@@ -17,6 +17,11 @@ import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
+
+/**
+ * Class Sets the Information of the Summary DQRs in the Recycler View.
+ */
+
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
     public Context mContext ;
@@ -84,6 +89,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         TextView folder ;
         TextView observer ;
+
+        /**
+         *         To Fetch an Image
+         */
+
         //ImageView img_thumbnail;
         LinearLayout view_container;
 
@@ -94,6 +104,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             view_container = itemView.findViewById(R.id.container);
             folder = itemView.findViewById(R.id.folder);
             observer = itemView.findViewById(R.id.observer);
+
+            /**
+             * Sets the Image in The View Holder
+             */
             //img_thumbnail = itemView.findViewById(R.id.thumbnail);
 
         }
