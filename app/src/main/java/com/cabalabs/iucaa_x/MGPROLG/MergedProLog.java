@@ -13,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.cabalabs.iucaa_x.MOBSID.MergOBSID;
 import com.cabalabs.iucaa_x.MainActivity;
@@ -24,6 +27,8 @@ import com.cabalabs.iucaa_x.UOBSID.UpOBSID;
 
 public class MergedProLog extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +54,16 @@ public class MergedProLog extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        webView = (WebView)findViewById(R.id.webview);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://www.iucaa.in/~astrosat/czti_dqr/mergelogs/");
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+//
+
+
     }
 
     @Override

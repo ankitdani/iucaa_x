@@ -36,6 +36,7 @@
         <activity
             android:name=".MGPROLG.MergedProLog"
             android:label="@string/title_activity_merged_pro_log"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UOBSID.UpOBSID"
