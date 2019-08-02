@@ -15,6 +15,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.cabalabs.iucaa_x.MGPROLG.MergedProLog;
 import com.cabalabs.iucaa_x.MOBSID.MergOBSID;
@@ -35,6 +38,7 @@ public class PixHistory extends AppCompatActivity
     RecyclerView list;
     RecyclerView.LayoutManager layoutManager;
     List<Item> items = new ArrayList<>();
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,33 +65,50 @@ public class PixHistory extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        list = (RecyclerView)findViewById(R.id.recycler);
-        list.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        list.setLayoutManager(layoutManager);
 
-        setData();
-    }
+        webView = (WebView)findViewById(R.id.webview);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://www.iucaa.in/~astrosat/czti_dqr/pixhist.html");
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+//
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        drawer.addDrawerListener(toggle);
+//        toggle.syncState();
+//
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
 
-    private void setData() {
-        for(int i=0;i<20;i++)
-        {
-
-            Item item = new Item("This is item "+(i+1),"LEVEL1AS1CZT20190209C04_009T03_9000002714.tar_V1.2", true);
-            items.add(item);
-//            if(i%2==0)
-//            {
-//                Item item = new Item("This is item "+(i+1),"LEVEL1AS1CZT20190209C04_009T03_9000002714.tar_V1.2", true);
-//                items.add(item);
-//            }
-//            else
-//            {
-//                Item item = new Item("This is item "+(i+1),"",false);
-//                items.add(item);
-//            }
-        }
-        MyAdapter adapter = new MyAdapter(items);
-        list.setAdapter(adapter);
+//
+//        list = (RecyclerView)findViewById(R.id.recycler);
+//        list.setHasFixedSize(true);
+//        layoutManager = new LinearLayoutManager(this);
+//        list.setLayoutManager(layoutManager);
+//
+//        setData();
+//    }
+//
+//    private void setData() {
+//        for(int i=0;i<20;i++)
+//        {
+//
+//            Item item = new Item("This is item "+(i+1),"LEVEL1AS1CZT20190209C04_009T03_9000002714.tar_V1.2", true);
+//            items.add(item);
+////            if(i%2==0)
+////            {
+////                Item item = new Item("This is item "+(i+1),"LEVEL1AS1CZT20190209C04_009T03_9000002714.tar_V1.2", true);
+////                items.add(item);
+////            }
+////            else
+////            {
+////                Item item = new Item("This is item "+(i+1),"",false);
+////                items.add(item);
+////            }
+//        }
+//        MyAdapter adapter = new MyAdapter(items);
+//        list.setAdapter(adapter);
     }
     @Override
     public void onBackPressed() {

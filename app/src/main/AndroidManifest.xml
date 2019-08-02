@@ -26,6 +26,7 @@
         <activity
             android:name=".PXHIST.PixHistory"
             android:label="@string/title_activity_pix_history"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PROBPGS.ProblemPg"
