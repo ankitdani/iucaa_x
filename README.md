@@ -1,14 +1,15 @@
-# iucaa_x
+# Android application
 
-Project objective:
+The application retrieves ASTROSAT CZTI data quality reports and displays them on an android device.
+Astrosat is India's first dedicated multi-wavelength space telescope. More info about this can be found [here](http://astrosat.iucaa.in/).
 
-The main objective of the project is to design an efficient architecture to fetch ASTROSAT CZTI data quality reports(DQRs) and provide a user interface on a hand held device.
+### Tech stack used:
 
-Tech stack:
+Django REST API, google volley, java, android gradle, aws device farm.
 
-Java, django REST API, android gradle, google volley
+### [Testing conducted](https://github.com/ankitdani1997/iucaa_x/tree/master/Screenshots/Testing%20Results):
 
-Testing:
+Alpha testing was successfully conducted on 10+ users and the application was compatible for 80% of the devices that ran on the android version Marshmallow. 
+Some other testing includes junit testing, web performance testing using AWS device farm.
 
-Junit testing, device compatibility testing using AWS device farm, Web performance testing using AWS device farm, Alpha testing
-
+Complete documentation can be found [here](https://github.com/ankitdani1997/iucaa_x/tree/master/Documentation). 
