@@ -7,6 +7,8 @@ Astrosat is India's first dedicated multi-wavelength space telescope. More info 
 
 Django REST API, google volley, java, android gradle, aws device farm.
 
+### [Application](https://github.com/ankitdani1997/iucaa_x/tree/master/Screenshots/Frontend)
+
 ### [Testing conducted](https://github.com/ankitdani1997/iucaa_x/tree/master/Screenshots/Testing%20Results):
 
 Alpha testing was successfully conducted on 10+ users and the application was compatible for 80% of the devices that ran on the android version Marshmallow. 
