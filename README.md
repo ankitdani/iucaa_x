@@ -1,17 +1,42 @@
 # Android application
 
-The application retrieves ASTROSAT CZTI data quality reports and displays them on an android device.
+## Overview
+
+The application retrieves data quality reports collected by the CZTI component of the [ASTROSAT satllite](https://web.iucaa.in/~astrosat/czti_specs.html) and displays them on an android device. 
 Astrosat is India's first dedicated multi-wavelength space telescope. More info about this can be found [here](http://astrosat.iucaa.in/).
 
-### Tech stack used:
+## Testing
 
-Django REST API, google volley, java, android gradle, aws device farm.
+Alpha testing was successfully conducted on 10+ users and the application was compatible for 80% of the devices that ran on the android version Marshmallow. More details about the testing can be found [here](https://github.com/ankitdani1997/iucaa_x/tree/master/Screenshots/Testing%20Results).
 
-### [Application](https://github.com/ankitdani1997/iucaa_x/tree/master/Screenshots/Frontend)
+## UI
 
-### [Testing conducted](https://github.com/ankitdani1997/iucaa_x/tree/master/Screenshots/Testing%20Results):
+You can check the final user interface [here](https://github.com/ankitdani1997/iucaa_x/tree/master/Screenshots/Frontend).
 
-Alpha testing was successfully conducted on 10+ users and the application was compatible for 80% of the devices that ran on the android version Marshmallow. 
-Some other testing includes junit testing, web performance testing using AWS device farm.
+## Publications
 
-Complete documentation can be found [here](https://github.com/ankitdani1997/iucaa_x/tree/master/Documentation). 
+### IEEE
+
+Architectural Optimization of Large Scale Astronomical Data
+
+The paper describes the design and benefits of using a django framwork archiecture to retrieve heterogeneous astronomical data. 
+
+```
+[DOI](https://ieeexplore.ieee.org/document/8944504): 10.1109/ICCCNT45670.2019.8944504
+```
+
+### Springer
+
+Comparative Analysis for an Optimized Data-Driven System
+
+The paper compares a django architecture design and a naive approach to retieve data from a server on factors like retrieval time and efficiency proving that the data retrieval speed can be improved by 97.2% by using a django architecture and google volley. 
+
+
+```
+[DOI](https://link.springer.com/chapter/10.1007/978-981-15-0790-8_4): 10.1007/978-981-15-0790-8_4
+```
+
+
+
+
+
