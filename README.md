@@ -17,23 +17,23 @@ You can check the final user interface [here](https://github.com/ankitdani1997/i
 
 ### IEEE
 
-Architectural Optimization of Large Scale Astronomical Data
+[Architectural Optimization of Large Scale Astronomical Data](https://ieeexplore.ieee.org/document/8944504)
 
 The paper describes the design and benefits of using a django framwork archiecture to retrieve heterogeneous astronomical data. 
 
 ```
-[DOI](https://ieeexplore.ieee.org/document/8944504): 10.1109/ICCCNT45670.2019.8944504
+DOI: 10.1109/ICCCNT45670.2019.8944504
 ```
 
 ### Springer
 
-Comparative Analysis for an Optimized Data-Driven System
+[Comparative Analysis for an Optimized Data-Driven System](https://link.springer.com/chapter/10.1007/978-981-15-0790-8_4)
 
 The paper compares a django architecture design and a naive approach to retieve data from a server on factors like retrieval time and efficiency proving that the data retrieval speed can be improved by 97.2% by using a django architecture and google volley. 
 
 
 ```
-[DOI](https://link.springer.com/chapter/10.1007/978-981-15-0790-8_4): 10.1007/978-981-15-0790-8_4
+DOI: 10.1007/978-981-15-0790-8_4
 ```
 
 
