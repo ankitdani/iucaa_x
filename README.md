@@ -3,7 +3,7 @@
 ## Overview
 
 The application retrieves data quality reports collected by the CZTI component of the [ASTROSAT satllite](https://web.iucaa.in/~astrosat/czti_specs.html) and displays them on an android device. 
-Astrosat is India's first dedicated multi-wavelength space telescope. More info about this can be found [here](http://astrosat.iucaa.in/). (Application Screenshots)[https://github.com/ankitdani/iucaa_x/tree/master/Screenshots/Frontend]
+Astrosat is India's first dedicated multi-wavelength space telescope. More info about this can be found [here](http://astrosat.iucaa.in/). [Application Screenshots](https://github.com/ankitdani/iucaa_x/tree/master/Screenshots/Frontend)
 
 ## Testing
 
